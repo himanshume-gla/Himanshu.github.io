@@ -3,211 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himanshu Gupta | AI & Automation Architect</title>
+    <title>Himanshu Gupta | Career Journey</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { background-color: #f8fafc; color: #334155; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass-card { background: rgba(255, 255, 255, 0.9); border: 1px solid #e2e8f0; border-radius: 20px; transition: all 0.3s ease; }
-        .glass-card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px -5px rgb(0 0 0 / 0.1); }
-        .ai-accent { color: #2563eb; }
-        .progress-bg { background: #e2e8f0; border-radius: 999px; height: 8px; overflow: hidden; }
-        .progress-fill { background: linear-gradient(90deg, #2563eb, #60a5fa); height: 100%; border-radius: 999px; transition: width 1.5s ease-in-out; }
-        .btn-primary { background: #2563eb; color: white; transition: all 0.3s; box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39); }
-        .btn-primary:hover { background: #1d4ed8; transform: scale(1.05); }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
-        .floating { animation: float 5s ease-in-out infinite; }
+        .journey-line { position: relative; }
+        .journey-line::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: #e2e8f0; z-index: 0; }
+        .journey-dot { width: 40px; height: 40px; background: white; border: 4px solid #2563eb; border-radius: 50%; z-index: 10; display: flex; items-center; justify-content: center; position: absolute; left: 0; }
+        .cert-logo { height: 40px; width: auto; filter: grayscale(100%); transition: grayscale 0.3s; }
+        .cert-logo:hover { filter: grayscale(0%); }
+        .article-tab.active { border-bottom: 3px solid #2563eb; color: #2563eb; }
     </style>
 </head>
 <body class="p-6 md:p-16">
 
-    <nav class="max-w-6xl mx-auto flex justify-end mb-12">
-        <a href="your-resume-link.pdf" target="_blank" class="btn-primary px-6 py-3 rounded-full font-bold flex items-center gap-2 text-sm uppercase tracking-wider">
-            <i data-lucide="download" class="w-4 h-4"></i> Download Resume
-        </a>
+    <nav class="max-w-6xl mx-auto flex justify-end mb-8">
+        <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 text-sm uppercase"><i data-lucide="download"></i> Resume</a>
     </nav>
-
-    <header class="max-w-5xl mx-auto text-center mb-24">
-        <div class="inline-block p-4 mb-2 floating">
-             <i data-lucide="bot" class="w-16 h-16 ai-accent"></i>
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tighter mb-4">Himanshu Gupta</h1>
-        <p class="text-xl text-slate-500 font-medium italic">"Orchestrating the future of Enterprise Intelligence"</p>
-    </header>
-    <section class="max-w-6xl mx-auto mb-24">
-    <div class="flex items-center gap-3 mb-8">
-        <i data-lucide="zap" class="w-8 h-8 text-yellow-500"></i>
-        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Project Spotlight</h2>
-    </div>
-
-    <div class="glass-card p-8 md:p-12 border-t-8 border-blue-600 bg-gradient-to-br from-white to-blue-50">
-        <div class="flex flex-col lg:flex-row gap-12 items-center">
-            <div class="flex-1">
-                <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase mb-4 tracking-widest">
-                    Generative AI Implementation
-                </div>
-                <h3 class="text-3xl font-bold text-slate-900 mb-4">Automated Test Case Generation via GenAI</h3>
-                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                    Designed and engineered a high-impact Proof of Concept (POC) to overhaul manual QA processes. By leveraging Large Language Models (LLMs) and custom prompt engineering, I automated the transformation of business requirements into functional test scripts.
-                </p>
-                
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
-                        <p class="text-3xl font-extrabold text-blue-600">80%</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold mt-1">Effort Reduction</p>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
-                        <p class="text-3xl font-extrabold text-blue-600">GenAI</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold mt-1">Tech Stack</p>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
-                        <p class="text-3xl font-extrabold text-blue-600">Banking</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold mt-1">Domain</p>
-                    </div>
-                </div>
-
-                <div class="space-y-3">
-                    <h4 class="font-bold text-slate-800 flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Key Achievements:
-                    </h4>
-                    <ul class="text-sm text-slate-600 space-y-2 ml-6">
-                        <li>• Integrated GenAI with existing CI/CD pipelines to ensure seamless automation.</li>
-                        <li>• Reduced the testing lifecycle from weeks to days for complex banking modules.</li>
-                        <li>• Presented results to senior stakeholders, securing further investment for AI scaling.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="flex-1 w-full max-w-sm">
-                <div class="p-6 bg-slate-900 rounded-3xl shadow-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-4 opacity-20">
-                        <i data-lucide="cpu" class="w-20 h-20 text-white"></i>
-                    </div>
-                    <div class="relative z-10 space-y-4">
-                        <div class="p-3 bg-slate-800 rounded-lg border border-slate-700 text-xs font-mono text-blue-400">
-                            > INPUT: Business Requirements Docs
-                        </div>
-                        <div class="flex justify-center">
-                            <i data-lucide="arrow-down" class="text-slate-500 animate-bounce"></i>
-                        </div>
-                        <div class="p-3 bg-blue-600 rounded-lg border border-blue-400 text-xs font-mono text-white text-center font-bold">
-                            GEN-AI ORCHESTRATOR
-                        </div>
-                        <div class="flex justify-center">
-                            <i data-lucide="arrow-down" class="text-slate-500"></i>
-                        </div>
-                        <div class="p-3 bg-slate-800 rounded-lg border border-slate-700 text-xs font-mono text-green-400">
-                            > OUTPUT: Validated Test Scripts
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
     <section class="max-w-6xl mx-auto mb-24">
         <h2 class="text-2xl font-bold text-slate-800 mb-10 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
-            <i data-lucide="bar-chart-3"></i> Capability Matrix
+            <i data-lucide="award"></i> Professional Accreditations
         </h2>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div class="glass-card p-8">
-                <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                    <i data-lucide="terminal" class="w-5 h-5 text-blue-600"></i> Technical Expertise
-                </h3>
-                <div class="space-y-6">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>GenAI & Machine Learning</span><span>85%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 85%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>RPA (Power Automate / Blue Prism)</span><span>95%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 95%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>Power Platform / Low-Code</span><span>90%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 90%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>ServiceNow & BMC Remedy</span><span>88%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 88%"></div></div>
-                    </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+                <img src="https://logo.clearbit.com/oracle.com" alt="Oracle Logo" class="cert-logo">
+                <p class="text-[10px] font-bold uppercase text-slate-500">OCI GenAI Professional</p>
+            </div>
+            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Logo" class="cert-logo">
+                <p class="text-[10px] font-bold uppercase text-slate-500">PL-400 / PL-500 / PL-300</p>
+            </div>
+            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+                <img src="https://www.blueprism.com/favicon.ico" alt="Blue Prism" class="cert-logo w-10">
+                <p class="text-[10px] font-bold uppercase text-slate-500">Blue Prism Certified</p>
+            </div>
+            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+                <img src="https://logo.clearbit.com/servicenow.com" alt="ServiceNow" class="cert-logo">
+                <p class="text-[10px] font-bold uppercase text-slate-500">ServiceNow CSA</p>
+            </div>
+            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+                <img src="https://logo.clearbit.com/bmc.com" alt="BMC" class="cert-logo">
+                <p class="text-[10px] font-bold uppercase text-slate-500">BMC Remedy Pro</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto mb-24">
+        <h2 class="text-2xl font-bold text-slate-800 mb-12 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
+            <i data-lucide="map"></i> Career Trajectory
+        </h2>
+        <div class="journey-line space-y-16">
+            
+            <div class="relative pl-16">
+                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
+                <div>
+                    <span class="text-xs font-bold text-blue-600 tracking-widest uppercase">2022 — Present</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Manager | Cognizant</h3>
+                    <p class="text-sm text-slate-600 mt-2">Spearheading GenAI POCs (80% effort reduction) and Banking RPA (90% efficiency).</p>
                 </div>
             </div>
 
-            <div class="glass-card p-8">
-                <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                    <i data-lucide="users" class="w-5 h-5 text-blue-600"></i> Management & Strategy
-                </h3>
-                <div class="space-y-6">
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>Solution Architecture</span><span>92%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 92%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>Stakeholder Management</span><span>88%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 88%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>Agile / Project Delivery</span><span>85%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 85%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-xs font-bold uppercase mb-2"><span>ITIL / Process Governance</span><span>90%</span></div>
-                        <div class="progress-bg"><div class="progress-fill" style="width: 90%"></div></div>
-                    </div>
+            <div class="relative pl-16">
+                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
+                <div>
+                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2018 — 2022</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Consultant | HCL Technologies</h3>
+                    <p class="text-sm text-slate-600 mt-2">Delivered 15+ automation solutions; identified 25+ use cases via SNOW data analysis.</p>
+                </div>
+            </div>
+
+            <div class="relative pl-16">
+                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
+                <div>
+                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2016 — 2018</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Senior Engineer | HCL Comnet</h3>
+                    <p class="text-sm text-slate-600 mt-2">Automated manual support tasks for 100+ BFSI customers using VB Macros and Remedy.</p>
+                </div>
+            </div>
+
+            <div class="relative pl-16">
+                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
+                <div>
+                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2014 — 2016</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-1">Project Engineer | Wipro</h3>
+                    <p class="text-sm text-slate-600 mt-2">L1 Team Lead for BMC Remedy; scripted an onboarding tool reducing errors by 95%.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section class="max-w-6xl mx-auto mb-24">
+        <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
+            <i data-lucide="newspaper"></i> Published Insights
+        </h2>
         
-        <section>
-            <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
-                <i data-lucide="briefcase"></i> Deployment History
-            </h2>
-            <div class="space-y-8 border-l-2 border-slate-200 pl-8 ml-4">
-                <div class="relative">
-                    <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></div>
-                    <h3 class="font-bold text-slate-900">Manager | Cognizant</h3>
-                    <p class="text-sm text-blue-600 mb-2">2022 - Present</p>
-                    <p class="text-sm text-slate-600 leading-relaxed">Pioneering banking automation with 90% efficiency gains and GenAI POCs reducing test cycles by 80%.</p>
+        <div class="glass-card p-4">
+            <div class="flex gap-4 border-b border-slate-100 mb-6 text-sm font-bold overflow-x-auto whitespace-nowrap">
+                <button onclick="switchArticle('art1')" id="tab-art1" class="article-tab px-4 py-2 active">Article 01: GenAI</button>
+                <button onclick="switchArticle('art2')" id="tab-art2" class="article-tab px-4 py-2">Article 02: RPA Strategy</button>
+                <button onclick="switchArticle('art3')" id="tab-art3" class="article-tab px-4 py-2">Article 03: ITSM Future</button>
+            </div>
+            
+            <div class="flex justify-center">
+                <div id="art1" class="article-content w-full flex justify-center">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291788024806264832" height="600" width="504" frameborder="0"></iframe>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white"></div>
-                    <h3 class="font-bold text-slate-900">Consultant | HCL Tech</h3>
-                    <p class="text-sm text-slate-500 mb-2">2018 - 2022</p>
-                    <p class="text-sm text-slate-600 leading-relaxed">Automated 15+ complex service desk workflows, cutting manual work by 60%.</p>
+                <div id="art2" class="article-content hidden w-full flex justify-center">
+                    <p class="p-20 text-slate-400"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7280905446784180225" height="1010" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
-                <i data-lucide="newspaper"></i> Thought Leadership
-            </h2>
-            <div class="glass-card overflow-hidden shadow-xl" style="max-width: 504px; margin: 0 auto;">
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291788024806264832" height="500" width="100%" frameborder="0" allowfullscreen="" title="LinkedIn Post"></iframe>
-            </div>
-        </section>
-    </main>
-
-    <footer class="max-w-6xl mx-auto mt-32 mb-16">
-        <div class="glass-card p-10 bg-slate-900 text-white flex flex-col md:flex-row justify-between items-center gap-8">
-            <div>
-                <h2 class="text-2xl font-bold text-blue-400 mb-2">Let's build something intelligent.</h2>
-                <p class="text-slate-400 text-sm">Noida, Uttar Pradesh | himanshume.gla@gmail.com</p>
-            </div>
-            <div class="flex gap-4">
-                <a href="mailto:himanshume.gla@gmail.com" class="p-3 bg-slate-800 rounded-lg hover:bg-blue-600 transition-all"><i data-lucide="mail"></i></a>
-                <a href="tel:+917028024418" class="p-3 bg-slate-800 rounded-lg hover:bg-blue-600 transition-all"><i data-lucide="phone"></i></a>
+                <div id="art3" class="article-content hidden w-full flex justify-center">
+                    <p class="p-20 text-slate-400"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7282762743625957376" height="842" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+
+        function switchArticle(id) {
+            // Hide all articles
+            document.querySelectorAll('.article-content').forEach(el => el.classList.add('hidden'));
+            // Remove active style from tabs
+            document.querySelectorAll('.article-tab').forEach(el => el.classList.remove('active'));
+            
+            // Show selected
+            document.getElementById(id).classList.remove('hidden');
+            document.getElementById('tab-' + id).classList.add('active');
+        }
+    </script>
 </body>
 </html>
-

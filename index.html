@@ -1,97 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himanshu Gupta | AI & Automation Architect</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #050505; color: #00f3ff; font-family: 'Fira Code', monospace; }
-        .glitch-text { text-shadow: 2px 0 #ff003c, -2px 0 #0500ff; }
-        .module-border { border: 1px solid #1a3a3a; position: relative; transition: all 0.3s; }
-        .module-border:hover { border-color: #00f3ff; box-shadow: 0 0 15px rgba(0, 243, 255, 0.3); }
-        .status-online { color: #39ff14; }
-        .scanline { width: 100%; height: 2px; background: rgba(0, 243, 255, 0.1); position: fixed; top: 0; left: 0; z-index: 100; pointer-events: none; animation: scan 8s linear infinite; }
-        @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
-    </style>
-</head>
-<body class="p-4 md:p-12 leading-relaxed">
-    <div class="scanline"></div>
+<section class="max-w-6xl mx-auto mb-24">
+    <div class="flex items-center gap-3 mb-8">
+        <i data-lucide="zap" class="w-8 h-8 text-yellow-500"></i>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Project Spotlight</h2>
+    </div>
 
-    <header class="max-w-6xl mx-auto mb-20 border-b-2 border-cyan-900 pb-10">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <div>
-                <p class="text-xs tracking-[0.3em] text-cyan-600 mb-2 uppercase">Core Identity Found // Noida, IN</p>
-                <h1 class="text-4xl md:text-6xl font-bold glitch-text uppercase tracking-tighter">Himanshu Gupta [cite: 1]</h1>
-                <p class="mt-4 text-xl text-gray-400">Manager & Solution Designer at <span class="text-cyan-400">Cognizant</span> [cite: 27, 28]</p>
-            </div>
-            <div class="mt-6 md:mt-0 text-right border border-cyan-800 p-4 bg-black/50">
-                <p class="text-xs font-bold text-gray-500 uppercase">System Status</p>
-                <p class="status-online font-bold tracking-widest">ACTIVE_ENGAGEMENT</p>
-                <p class="text-[10px] text-cyan-700 mt-2">v10.0.24-RPA_ARCHITECT</p>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
-        
-        <div class="lg:col-span-2 space-y-12">
-            <section>
-                <h2 class="text-2xl font-bold mb-8 flex items-center"><span class="bg-cyan-500 text-black px-2 mr-3 text-lg">01</span> DEPLOYMENT_HISTORY</h2>
+    <div class="glass-card p-8 md:p-12 border-t-8 border-blue-600 bg-gradient-to-br from-white to-blue-50">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <div class="flex-1">
+                <div class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase mb-4 tracking-widest">
+                    Generative AI Implementation
+                </div>
+                <h3 class="text-3xl font-bold text-slate-900 mb-4">Automated Test Case Generation via GenAI</h3>
+                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                    Designed and engineered a high-impact Proof of Concept (POC) to overhaul manual QA processes. By leveraging Large Language Models (LLMs) and custom prompt engineering, I automated the transformation of business requirements into functional test scripts.
+                </p>
                 
-                <div class="module-border p-6 bg-black/40 mb-8">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-white uppercase italic">Cognizant Technology [cite: 27]</h3>
-                        <span class="text-xs text-cyan-600">2022-PRESENT [cite: 26]</span>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
+                        <p class="text-3xl font-extrabold text-blue-600">80%</p>
+                        <p class="text-xs text-slate-500 uppercase font-bold mt-1">Effort Reduction</p>
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-300">
-                        <li><span class="text-cyan-500">>></span> Led RPA initiatives for banking, achieving <span class="text-white font-bold">90% efficiency improvement</span>[cite: 29, 30].</li>
-                        <li><span class="text-cyan-500">>></span> Engineered <span class="text-white font-bold">GenAI POC</span> for test case generation, reducing manual effort by <span class="text-white font-bold">80%</span>[cite: 34].</li>
-                        <li><span class="text-cyan-500">>></span> Orchestrated 10+ end-to-end automation lifecycles using Power Apps & Blue Prism[cite: 32, 33].</li>
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
+                        <p class="text-3xl font-extrabold text-blue-600">GenAI</p>
+                        <p class="text-xs text-slate-500 uppercase font-bold mt-1">Tech Stack</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
+                        <p class="text-3xl font-extrabold text-blue-600">Banking</p>
+                        <p class="text-xs text-slate-500 uppercase font-bold mt-1">Domain</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="font-bold text-slate-800 flex items-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Key Achievements:
+                    </h4>
+                    <ul class="text-sm text-slate-600 space-y-2 ml-6">
+                        <li>• Integrated GenAI with existing CI/CD pipelines to ensure seamless automation.</li>
+                        <li>• Reduced the testing lifecycle from weeks to days for complex banking modules.</li>
+                        <li>• Presented results to senior stakeholders, securing further investment for AI scaling.</li>
                     </ul>
                 </div>
+            </div>
 
-                <div class="module-border p-6 bg-black/40">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-white uppercase italic">HCL Technology [cite: 40]</h3>
-                        <span class="text-xs text-cyan-600">2018-2022 [cite: 39]</span>
+            <div class="flex-1 w-full max-w-sm">
+                <div class="p-6 bg-slate-900 rounded-3xl shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20">
+                        <i data-lucide="cpu" class="w-20 h-20 text-white"></i>
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-300">
-                        <li><span class="text-cyan-500">>></span> Implemented 15+ IT service desk solutions, driving <span class="text-white font-bold">60% reduction</span> in manual intervention[cite: 41].</li>
-                        <li><span class="text-cyan-500">>></span> Analyzed SNOW data to identify 25+ automation use cases for process optimization[cite: 45].</li>
-                        <li><span class="text-white font-bold">>> Achieved 50% reduction</span> in FTE requirements per project through strategic automation[cite: 47].</li>
-                    </ul>
+                    <div class="relative z-10 space-y-4">
+                        <div class="p-3 bg-slate-800 rounded-lg border border-slate-700 text-xs font-mono text-blue-400">
+                            > INPUT: Business Requirements Docs
+                        </div>
+                        <div class="flex justify-center">
+                            <i data-lucide="arrow-down" class="text-slate-500 animate-bounce"></i>
+                        </div>
+                        <div class="p-3 bg-blue-600 rounded-lg border border-blue-400 text-xs font-mono text-white text-center font-bold">
+                            GEN-AI ORCHESTRATOR
+                        </div>
+                        <div class="flex justify-center">
+                            <i data-lucide="arrow-down" class="text-slate-500"></i>
+                        </div>
+                        <div class="p-3 bg-slate-800 rounded-lg border border-slate-700 text-xs font-mono text-green-400">
+                            > OUTPUT: Validated Test Scripts
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
         </div>
-
-        <div class="space-y-12">
-            <section>
-                <h2 class="text-xl font-bold mb-6 text-white uppercase tracking-widest border-b border-cyan-800">Knowledge_Base</h2>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-cyan-950 border border-cyan-700 px-3 py-1 text-xs">GenAI Certified [cite: 15]</span>
-                    <span class="bg-cyan-950 border border-cyan-700 px-3 py-1 text-xs">Power Apps (PL-400) [cite: 16]</span>
-                    <span class="bg-cyan-950 border border-cyan-700 px-3 py-1 text-xs">Power BI (PL-300) [cite: 20]</span>
-                    <span class="bg-cyan-950 border border-cyan-700 px-3 py-1 text-xs">Blue Prism Designer [cite: 18]</span>
-                    <span class="bg-cyan-950 border border-cyan-700 px-3 py-1 text-xs">ServiceNow Admin [cite: 22]</span>
-                    <span class="bg-cyan-950 border border-cyan-700 px-3 py-1 text-xs">BMC Remedy Pro [cite: 23]</span>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold mb-6 text-white uppercase tracking-widest border-b border-cyan-800">Terminal_Access</h2>
-                <div class="text-xs space-y-4">
-                    <p class="text-gray-500 uppercase font-bold">> CONNECT</p>
-                    <p class="text-cyan-400">EMAIL: <a href="mailto:himanshume.gla@gmail.com" class="hover:underline">himanshume.gla@gmail.com</a> [cite: 2]</p>
-                    <p class="text-cyan-400">TEL: <a href="tel:+917028024418" class="hover:underline">(+91) 7028024418</a> [cite: 2]</p>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="max-w-6xl mx-auto mt-20 pt-8 border-t border-cyan-900 text-[10px] text-gray-600 tracking-[0.4em] uppercase">
-        Digital Footprint // Himanshu Gupta // End Transmission
-    </footer>
-</body>
-</html>
+    </div>
+</section>

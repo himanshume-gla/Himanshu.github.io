@@ -3,136 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himanshu Gupta | Career Journey</title>
+    <title>Himanshu Gupta | Automation & AI Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { background-color: #f8fafc; color: #334155; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass-card { background: rgba(255, 255, 255, 0.9); border: 1px solid #e2e8f0; border-radius: 20px; transition: all 0.3s ease; }
-        .journey-line { position: relative; }
-        .journey-line::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: #e2e8f0; z-index: 0; }
-        .journey-dot { width: 40px; height: 40px; background: white; border: 4px solid #2563eb; border-radius: 50%; z-index: 10; display: flex; items-center; justify-content: center; position: absolute; left: 0; }
-        .cert-logo { height: 40px; width: auto; filter: grayscale(100%); transition: grayscale 0.3s; }
-        .cert-logo:hover { filter: grayscale(0%); }
-        .article-tab.active { border-bottom: 3px solid #2563eb; color: #2563eb; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { background-color: #0f172a; color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; backdrop-filter: blur(12px); transition: all 0.3s ease; }
+        .glass-card:hover { transform: translateY(-5px); border-color: #3b82f6; }
+        .journey-line::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #3b82f6, #1e293b); }
+        .journey-dot { width: 40px; height: 40px; background: #0f172a; border: 4px solid #3b82f6; border-radius: 50%; z-index: 10; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; }
+        .cert-logo { height: 45px; width: auto; filter: brightness(0) invert(1); opacity: 0.7; transition: 0.3s; }
+        .glass-card:hover .cert-logo { opacity: 1; filter: none; }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #2dd4bf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .article-tab.active { border-bottom: 3px solid #3b82f6; color: #3b82f6; }
     </style>
 </head>
-<body class="p-6 md:p-16">
+<body class="p-6 md:p-12 lg:p-20">
 
-    <nav class="max-w-6xl mx-auto flex justify-end mb-8">
-        <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 text-sm uppercase"><i data-lucide="download"></i> Resume</a>
-    </nav>
+    <header class="max-w-6xl mx-auto mb-20 text-center md:text-left">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Himanshu <span class="gradient-text">Gupta</span></h1>
+                <p class="text-xl text-slate-400 max-w-2xl">Manager & Solution Architect specialized in <span class="text-white font-semibold">AI-Driven Automation</span> and Enterprise Power Platform solutions.</p>
+            </div>
+            <nav class="flex gap-4">
+                <a href="mailto:himanshume.gla@gmail.com" class="p-3 glass-card hover:text-blue-400"><i data-lucide="mail"></i></a>
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 transition-all">
+                    <i data-lucide="download"></i> Download CV
+                </a>
+            </nav>
+        </div>
+    </header>
 
     <section class="max-w-6xl mx-auto mb-24">
-        <h2 class="text-2xl font-bold text-slate-800 mb-10 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
-            <i data-lucide="award"></i> Professional Accreditations
+        <h2 class="text-sm font-bold tracking-[0.2em] text-blue-500 uppercase mb-8">Core Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-8">
+                <i data-lucide="cpu" class="text-blue-500 mb-4"></i>
+                <h3 class="text-lg font-bold mb-2">Intelligent Automation</h3>
+                <p class="text-slate-400 text-sm">Power Automate (Cloud/Desktop), Blue Prism, and AI Builder for end-to-end process optimization[cite: 80, 85].</p>
+            </div>
+            <div class="glass-card p-8">
+                <i data-lucide="bot" class="text-teal-400 mb-4"></i>
+                <h3 class="text-lg font-bold mb-2">Generative AI</h3>
+                <p class="text-slate-400 text-sm">Azure OpenAI integration and OCI GenAI certified professional. Expert in AI-driven PoCs[cite: 85, 114].</p>
+            </div>
+            <div class="glass-card p-8">
+                <i data-lucide="layers" class="text-purple-500 mb-4"></i>
+                <h3 class="text-lg font-bold mb-2">Low-Code Architecture</h3>
+                <p class="text-slate-400 text-sm">Enterprise-grade Power Apps, Dataverse schema design, and Governance (CoE Toolkit)[cite: 80, 87].</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto mb-24">
+        <h2 class="text-2xl font-bold mb-10 flex items-center gap-3">
+            <i data-lucide="award" class="text-blue-500"></i> Accreditations
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
-                <img src="https://logo.clearbit.com/oracle.com" alt="Oracle Logo" class="cert-logo">
-                <p class="text-[10px] font-bold uppercase text-slate-500">OCI GenAI Professional</p>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div class="glass-card p-6 flex flex-col items-center gap-3">
+                <img src="https://logo.clearbit.com/oracle.com" alt="Oracle" class="cert-logo">
+                <p class="text-[10px] font-bold text-slate-500 uppercase">OCI GenAI Professional</p>
             </div>
-            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
-                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Logo" class="cert-logo">
-                <p class="text-[10px] font-bold uppercase text-slate-500">PL-400 / PL-500 / PL-300</p>
+            <div class="glass-card p-6 flex flex-col items-center gap-3">
+                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="cert-logo">
+                <p class="text-[10px] font-bold text-slate-500 uppercase">PL-400 & PL-500</p>
             </div>
-            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+            <div class="glass-card p-6 flex flex-col items-center gap-3">
                 <img src="https://www.blueprism.com/favicon.ico" alt="Blue Prism" class="cert-logo w-10">
-                <p class="text-[10px] font-bold uppercase text-slate-500">Blue Prism Certified</p>
+                <p class="text-[10px] font-bold text-slate-500 uppercase">Solution Designer</p>
             </div>
-            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+            <div class="glass-card p-6 flex flex-col items-center gap-3">
                 <img src="https://logo.clearbit.com/servicenow.com" alt="ServiceNow" class="cert-logo">
-                <p class="text-[10px] font-bold uppercase text-slate-500">ServiceNow CSA</p>
+                <p class="text-[10px] font-bold text-slate-500 uppercase">Certified Admin</p>
             </div>
-            <div class="glass-card p-6 flex flex-col items-center text-center gap-3">
+            <div class="glass-card p-6 flex flex-col items-center gap-3">
                 <img src="https://logo.clearbit.com/bmc.com" alt="BMC" class="cert-logo">
-                <p class="text-[10px] font-bold uppercase text-slate-500">BMC Remedy Pro</p>
+                <p class="text-[10px] font-bold text-slate-500 uppercase">Remedy Specialist</p>
             </div>
         </div>
     </section>
 
     <section class="max-w-4xl mx-auto mb-24">
-        <h2 class="text-2xl font-bold text-slate-800 mb-12 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
-            <i data-lucide="map"></i> Career Trajectory
+        <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
+            <i data-lucide="milestone" class="text-blue-500"></i> Career Evolution
         </h2>
-        <div class="journey-line space-y-16">
-            
+        <div class="journey-line space-y-12">
             <div class="relative pl-16">
-                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
-                <div>
-                    <span class="text-xs font-bold text-blue-600 tracking-widest uppercase">2022 — Present</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-1">Manager | Cognizant</h3>
-                    <p class="text-sm text-slate-600 mt-2">Spearheading GenAI POCs (80% effort reduction) and Banking RPA (90% efficiency).</p>
+                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-400"></i></div>
+                <div class="glass-card p-6">
+                    <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">2022 — Present</span>
+                    <h3 class="text-xl font-bold mt-1">Manager | Cognizant</h3>
+                    <ul class="text-sm text-slate-400 mt-3 space-y-2">
+                        <li>• Architected RPA for banking, achieving 90% efficiency gains[cite: 30].</li>
+                        <li>• Developed GenAI POC reducing test case efforts by 80%[cite: 34, 97].</li>
+                        <li>• Leading cross-functional teams on Power Platform governance[cite: 92, 93].</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="relative pl-16">
-                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
-                <div>
-                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2018 — 2022</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-1">Consultant | HCL Technologies</h3>
-                    <p class="text-sm text-slate-600 mt-2">Delivered 15+ automation solutions; identified 25+ use cases via SNOW data analysis.</p>
-                </div>
-            </div>
-
-            <div class="relative pl-16">
-                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
-                <div>
-                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2016 — 2018</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-1">Senior Engineer | HCL Comnet</h3>
-                    <p class="text-sm text-slate-600 mt-2">Automated manual support tasks for 100+ BFSI customers using VB Macros and Remedy.</p>
-                </div>
-            </div>
-
-            <div class="relative pl-16">
-                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i></div>
-                <div>
-                    <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">2014 — 2016</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-1">Project Engineer | Wipro</h3>
-                    <p class="text-sm text-slate-600 mt-2">L1 Team Lead for BMC Remedy; scripted an onboarding tool reducing errors by 95%.</p>
+                <div class="journey-dot border-slate-600"><i data-lucide="briefcase" class="w-4 h-4 text-slate-500"></i></div>
+                <div class="glass-card p-6 opacity-80">
+                    <span class="text-xs font-bold text-slate-500 tracking-widest uppercase">2018 — 2022</span>
+                    <h3 class="text-xl font-bold mt-1 text-slate-300">Consultant | HCL Technology</h3>
+                    <p class="text-sm text-slate-500 mt-2">Deployed 15+ automation solutions; identified 25+ use cases via SNOW analysis, reducing manual intervention by 60%[cite: 41, 45].</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="max-w-6xl mx-auto mb-24">
-        <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3 underline decoration-blue-500 underline-offset-8">
-            <i data-lucide="newspaper"></i> Published Insights
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+            <i data-lucide="terminal" class="text-blue-500"></i> Thought Leadership
         </h2>
         
-        <div class="glass-card p-4">
-            <div class="flex gap-4 border-b border-slate-100 mb-6 text-sm font-bold overflow-x-auto whitespace-nowrap">
-                <button onclick="switchArticle('art1')" id="tab-art1" class="article-tab px-4 py-2 active">Article 01: GenAI</button>
-                <button onclick="switchArticle('art2')" id="tab-art2" class="article-tab px-4 py-2">Article 02: RPA Strategy</button>
-                <button onclick="switchArticle('art3')" id="tab-art3" class="article-tab px-4 py-2">Article 03: ITSM Future</button>
+        <div class="glass-card p-2">
+            <div class="flex gap-2 p-2 bg-slate-800/50 rounded-xl mb-6 text-sm font-bold overflow-x-auto">
+                <button onclick="switchArticle('art1')" id="tab-art1" class="article-tab px-6 py-3 active rounded-lg hover:bg-slate-700">GenAI Innovation</button>
+                <button onclick="switchArticle('art2')" id="tab-art2" class="article-tab px-6 py-3 rounded-lg hover:bg-slate-700">RPA Strategy</button>
+                <button onclick="switchArticle('art3')" id="tab-art3" class="article-tab px-6 py-3 rounded-lg hover:bg-slate-700">ITSM Future</button>
             </div>
             
-            <div class="flex justify-center">
+            <div class="flex justify-center p-4">
                 <div id="art1" class="article-content w-full flex justify-center">
-                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291788024806264832" height="600" width="504" frameborder="0"></iframe>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291788024806264832" height="600" width="100%" class="max-w-[600px] rounded-xl" frameborder="0"></iframe>
                 </div>
                 <div id="art2" class="article-content hidden w-full flex justify-center">
-                    <p class="p-20 text-slate-400"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7280905446784180225" height="1010" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7280905446784180225" height="600" width="100%" class="max-w-[600px] rounded-xl" frameborder="0"></iframe>
                 </div>
                 <div id="art3" class="article-content hidden w-full flex justify-center">
-                    <p class="p-20 text-slate-400"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7282762743625957376" height="842" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7282762743625957376" height="600" width="100%" class="max-w-[600px] rounded-xl" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer class="text-center text-slate-500 text-sm pb-10">
+        <p>© 2026 Himanshu Gupta • Built with Tailwind & Lucide</p>
+    </footer>
+
     <script>
         lucide.createIcons();
-
         function switchArticle(id) {
-            // Hide all articles
             document.querySelectorAll('.article-content').forEach(el => el.classList.add('hidden'));
-            // Remove active style from tabs
-            document.querySelectorAll('.article-tab').forEach(el => el.classList.remove('active'));
-            
-            // Show selected
+            document.querySelectorAll('.article-tab').forEach(el => el.classList.remove('active', 'bg-slate-700'));
             document.getElementById(id).classList.remove('hidden');
-            document.getElementById('tab-' + id).classList.add('active');
+            document.getElementById('tab-' + id).classList.add('active', 'bg-slate-700');
         }
     </script>
 </body>

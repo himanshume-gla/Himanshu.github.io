@@ -1,156 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himanshu Gupta | Automation & AI Architect</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { background-color: #0f172a; color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; backdrop-filter: blur(12px); transition: all 0.3s ease; }
-        .glass-card:hover { transform: translateY(-5px); border-color: #3b82f6; }
-        .journey-line::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #3b82f6, #1e293b); }
-        .journey-dot { width: 40px; height: 40px; background: #0f172a; border: 4px solid #3b82f6; border-radius: 50%; z-index: 10; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; }
-        .gradient-text { background: linear-gradient(90deg, #3b82f6, #2dd4bf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .star-filled { color: #fbbf24; fill: #fbbf24; }
-        .star-empty { color: #475569; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Himanshu Gupta | RPA & AI Automation Architect</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+    .glass {
+      background: rgba(30,41,59,0.75);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      border-radius: 24px;
+      transition: all .3s ease;
+    }
+    .glass:hover {
+      transform: translateY(-6px);
+      border-color: #3b82f6;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg,#3b82f6,#22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body class="p-6 md:p-12 lg:p-20">
 
-    <header class="max-w-6xl mx-auto mb-16">
-        <div class="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div class="max-w-3xl">
-                <h1 class="text-5xl font-extrabold mb-4">Himanshu <span class="gradient-text">Gupta</span></h1>
-                <p class="text-xl text-blue-400 font-semibold mb-3">Automation & AI Solution Architect</p>
-                <p class="text-slate-400 italic text-lg border-l-2 border-blue-500 pl-4">
-                    "Seeking to leverage my technical expertise and business acumen to drive innovation and deliver seamless IT service desk solutions."
-                </p>
-            </div>
-            <nav class="flex gap-4">
-                <a href="mailto:himanshume.gla@gmail.com" class="bg-slate-800 p-4 rounded-2xl hover:text-blue-400 transition-colors"><i data-lucide="mail"></i></a>
-                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 transition-all">
-                    <i data-lucide="download"></i> Resume
-                </a>
-            </nav>
-        </div>
-    </header>
+<body class="px-6 md:px-12 lg:px-24 py-12">
 
-    <section class="max-w-6xl mx-auto mb-20">
-        <div class="glass-card p-8">
-            <h2 class="text-sm font-bold tracking-[0.2em] text-blue-500 uppercase mb-4">Professional Summary</h2>
-            <p class="text-lg leading-relaxed text-slate-300">
-                Results-driven IT professional with 10+ years of experience in Digital Transformation, Process Automation, and Enterprise Solution Architecture[cite: 79]. Specialized in designing scalable, high-performing automation architectures using Microsoft Power Platform (Power Automate, Power Apps, Dataverse, AI Builder) and Blue Prism[cite: 80, 85]. Proven ability to translate business requirements into end-to-end technical solutions aligned with global best practices[cite: 81].
-            </p>
-        </div>
-    </section>
+<!-- HERO -->
+<header class="max-w-6xl mx-auto mb-24">
+  <div class="flex flex-col md:flex-row justify-between gap-10">
+    <div class="max-w-3xl">
+      <h1 class="text-5xl font-extrabold mb-4">
+        Himanshu <span class="gradient-text">Gupta</span>
+      </h1>
+      <p class="text-xl text-blue-400 font-semibold mb-4">
+        RPA & AI Automation Architect
+      </p>
+      <p class="text-slate-400 text-lg border-l-4 border-blue-500 pl-5 italic">
+        Designing enterprise-grade automation systems that blend RPA, AI, and ITSM to reduce cost, risk, and operational friction.
+      </p>
+    </div>
 
-    <section class="max-w-6xl mx-auto mb-24">
-        <h2 class="text-2xl font-bold mb-10 flex items-center gap-3"><i data-lucide="zap" class="text-yellow-500"></i> Expertise Matrix</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass-card p-6">
-                <h3 class="text-blue-400 font-bold mb-6 flex items-center gap-2"><i data-lucide="code"></i> Technical Tools</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center"><span class="text-sm">Power Platform / RPA</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i></div></div>
-                    <div class="flex justify-between items-center"><span class="text-sm">Generative AI / ML</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-empty"></i></div></div>
-                    <div class="flex justify-between items-center"><span class="text-sm">ITSM (SNOW/Remedy)</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i></div></div>
-                </div>
-            </div>
+    <div class="flex flex-col gap-4">
+      <a href="mailto:himanshume.gla@gmail.com"
+         class="flex items-center gap-3 bg-slate-800 px-6 py-4 rounded-xl hover:text-blue-400">
+        <i data-lucide="mail"></i> Contact Me
+      </a>
+      <a href="#"
+         class="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-6 py-4 rounded-xl font-bold">
+        <i data-lucide="download"></i> Download Resume
+      </a>
+    </div>
+  </div>
+</header>
 
-            <div class="glass-card p-6">
-                <h3 class="text-teal-400 font-bold mb-6 flex items-center gap-2"><i data-lucide="users"></i> Management</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center"><span class="text-sm">Technical Leadership</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i></div></div>
-                    <div class="flex justify-between items-center"><span class="text-sm">Stakeholder Mgt.</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i></div></div>
-                    <div class="flex justify-between items-center"><span class="text-sm">Agile / JIRA</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-empty"></i></div></div>
-                </div>
-            </div>
+<!-- VALUE PROPOSITION -->
+<section class="max-w-6xl mx-auto mb-24">
+  <div class="glass p-10">
+    <h2 class="uppercase tracking-widest text-blue-400 text-sm font-bold mb-4">
+      What I Do
+    </h2>
+    <p class="text-lg leading-relaxed text-slate-300">
+      I architect and deliver large-scale RPA and AI-driven automation solutions for banking,
+      telecom, and enterprise IT environments. With 10+ years across Cognizant, HCL, and Wipro,
+      I specialize in translating complex business workflows into secure, scalable,
+      and production-ready automation ecosystems using Microsoft Power Platform,
+      Blue Prism, and Generative AI.
+    </p>
+  </div>
+</section>
 
-            <div class="glass-card p-6">
-                <h3 class="text-purple-400 font-bold mb-6 flex items-center gap-2"><i data-lucide="heart"></i> Strategy</h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center"><span class="text-sm">Solution Designing</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i></div></div>
-                    <div class="flex justify-between items-center"><span class="text-sm">Requirement Gathering</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i></div></div>
-                    <div class="flex justify-between items-center"><span class="text-sm">Problem Solving</span><div class="flex gap-1"><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i><i data-lucide="star" class="w-3 h-3 star-filled"></i></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- SERVICES -->
+<section class="max-w-6xl mx-auto mb-24">
+  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
+    <i data-lucide="layers"></i> Services & Capabilities
+  </h2>
 
-    <section class="max-w-4xl mx-auto mb-24">
-        <h2 class="text-2xl font-bold mb-12 flex items-center gap-3"><i data-lucide="milestone"></i> Career Evolution</h2>
-        <div class="journey-line space-y-12">
-            <div class="relative pl-16">
-                <div class="journey-dot"><i data-lucide="award" class="w-4 h-4 text-blue-400"></i></div>
-                <div class="glass-card p-6 border-l-4 border-l-blue-500">
-                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">2022 — Present</span>
-                    <h3 class="text-xl font-bold mt-1">Manager | Cognizant Technology</h3>
-                    <p class="text-sm text-slate-400 mt-2">Architecting scalable automation solutions using Power Platform and Blue Prism for top banking clients[cite: 91, 94]. Led AI-driven PoCs reducing manual test case effort by 80%[cite: 97].</p>
-                </div>
-            </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="glass p-6">
+      <h3 class="font-bold text-blue-400 mb-3">RPA Architecture</h3>
+      <p class="text-sm text-slate-400">
+        Enterprise RPA design, governance models, reusable frameworks, security & compliance.
+      </p>
+    </div>
 
-            <div class="relative pl-16">
-                <div class="journey-dot"><i data-lucide="briefcase" class="w-4 h-4 text-blue-400"></i></div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">2018 — 2022</span>
-                    <h3 class="text-xl font-bold mt-1">Consultant | HCL Technology</h3>
-                    <p class="text-sm text-slate-400 mt-2">Implemented 15+ automation solutions on ITSM platforms[cite: 100]. Analyzed ServiceNow data to uncover 25+ key automation use cases[cite: 101].</p>
-                </div>
-            </div>
+    <div class="glass p-6">
+      <h3 class="font-bold text-teal-400 mb-3">AI-Driven Automation</h3>
+      <p class="text-sm text-slate-400">
+        GenAI-based test case generation, NLP workflows, AI Builder, intelligent decisioning.
+      </p>
+    </div>
 
-            <div class="relative pl-16">
-                <div class="journey-dot border-slate-700"><i data-lucide="terminal" class="w-4 h-4 text-slate-500"></i></div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">2016 — 2018</span>
-                    <h3 class="text-xl font-bold mt-1">Senior Engineer | HCL Comnet Limited</h3>
-                    <p class="text-sm text-slate-400 mt-2">Operations lead for ITSM, developing reusable audit automation using VB macros and toolkits for 100+ multi-tenant customers[cite: 105, 106, 107].</p>
-                </div>
-            </div>
+    <div class="glass p-6">
+      <h3 class="font-bold text-purple-400 mb-3">ITSM Automation</h3>
+      <p class="text-sm text-slate-400">
+        ServiceNow & Remedy automation across Incident, Change, CMDB, onboarding and audits.
+      </p>
+    </div>
 
-            <div class="relative pl-16">
-                <div class="journey-dot border-slate-700"><i data-lucide="layers" class="w-4 h-4 text-slate-500"></i></div>
-                <div class="glass-card p-6">
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">2014 — 2016</span>
-                    <h3 class="text-xl font-bold mt-1">Project Engineer | Wipro Technology</h3>
-                    <p class="text-sm text-slate-400 mt-2">Led ITSM onboarding automation, reducing human error by 95% and FTE count by 40% through custom discovery scripts[cite: 109, 110, 111].</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="glass p-6">
+      <h3 class="font-bold text-yellow-400 mb-3">Consulting & PoCs</h3>
+      <p class="text-sm text-slate-400">
+        Automation discovery, ROI assessment, PoC → Production execution.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <section class="max-w-6xl mx-auto mb-24">
-        <h2 class="text-2xl font-bold mb-10 flex items-center gap-3"><i data-lucide="message-square" class="text-green-500"></i> Recommendations</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card p-8 relative italic text-slate-400">
-                <i data-lucide="quote" class="absolute top-4 right-8 text-slate-700 w-12 h-12"></i>
-                "Himanshu's ability to simplify complex RPA concepts for stakeholders while delivering high-impact solutions is unparalleled. His work on the banking automation project was critical to our 90% efficiency gain."
-                <div class="mt-6 flex items-center gap-4 not-italic">
-                    <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold">JD</div>
-                    <div>
-                        <p class="text-white font-bold text-sm">Client Director</p>
-                        <p class="text-xs">Leading Banking Institution</p>
-                    </div>
-                </div>
-            </div>
-            <div class="glass-card p-8 relative italic text-slate-400">
-                <i data-lucide="quote" class="absolute top-4 right-8 text-slate-700 w-12 h-12"></i>
-                "A true expert in the Microsoft Power Platform. Himanshu doesn't just build bots; he architects enterprise-grade solutions that are secure, compliant, and highly scalable."
-                <div class="mt-6 flex items-center gap-4 not-italic">
-                    <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold">TL</div>
-                    <div>
-                        <p class="text-white font-bold text-sm">Technical Lead</p>
-                        <p class="text-xs">Cognizant Technology</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p class="text-center mt-8"><a href="https://www.linkedin.com/in/hg1992" target="_blank" class="text-blue-400 font-bold hover:underline">View All Recommendations on LinkedIn →</a></p>
-    </section>
+<!-- CAREER SNAPSHOT -->
+<section class="max-w-6xl mx-auto mb-24">
+  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
+    <i data-lucide="briefcase"></i> Career Highlights
+  </h2>
 
-    <script>
-        lucide.createIcons();
-    </script>
+  <div class="space-y-6">
+    <div class="glass p-6">
+      <h3 class="font-bold text-lg">Manager – Cognizant</h3>
+      <p class="text-sm text-slate-400">
+        Led banking RPA programs automating KYC, loan recovery and collections.
+        Delivered up to <b>90% efficiency improvement</b>.
+        Built GenAI PoC reducing test case creation effort by <b>80%</b>.
+      </p>
+    </div>
+
+    <div class="glass p-6">
+      <h3 class="font-bold text-lg">Consultant – HCL Technologies</h3>
+      <p class="text-sm text-slate-400">
+        Delivered 15+ ITSM automations, reduced manual effort by 60%,
+        uncovered 25+ automation opportunities via SNOW analytics.
+      </p>
+    </div>
+
+    <div class="glass p-6">
+      <h3 class="font-bold text-lg">Senior Engineer – HCL Comnet</h3>
+      <p class="text-sm text-slate-400">
+        Multi-tenant ITSM automation, audit tooling, and platform customization
+        across 100+ enterprise clients.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="max-w-4xl mx-auto text-center mb-24">
+  <div class="glass p-10">
+    <h2 class="text-3xl font-extrabold mb-4">
+      Let’s Build Intelligent Automation
+    </h2>
+    <p class="text-slate-400 mb-8">
+      Open to consulting, freelance engagements, and senior architecture roles.
+    </p>
+    <a href="mailto:himanshume.gla@gmail.com"
+       class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-bold">
+      <i data-lucide="send"></i> Start a Conversation
+    </a>
+  </div>
+</section>
+
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 </html>

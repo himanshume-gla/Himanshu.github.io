@@ -56,9 +56,7 @@
 </head>
 <!-- HG NEXUS SIDE PANEL -->
 <div id="hg-nexus-panel"
-  class="fixed bottom-6 right-6 w-[360px] max-h-[520px]
-            bg-white shadow-2xl rounded-2xl border border-slate-200
-            flex flex-col transition-transform duration-300">
+  class="fixed bottom-24 right-6 z-50 w-96 max-w-[90vw] glass scale-0 opacity-0">
 
   <!-- Header -->
   <div class="flex items-center justify-between px-6 py-4 border-b">
@@ -70,6 +68,14 @@
       class="absolute top-3 right-3 text-slate-400 hover:text-red-500">
       ✕
     </button>
+    <!-- HG Nexus Launcher -->
+<button
+  id="hg-nexus-launcher"
+  class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-xl"
+  aria-label="Open HG Nexus"
+>
+  <i data-lucide="bot"></i>
+</button>
   </div>
 
   <!-- Content -->
@@ -606,7 +612,7 @@
         across 111+ enterprise clients.
       </p>
     </div>
-  </div>
+  
   <div class="glass p-6">
   <h3 class="font-bold text-lg">Project Engineer – Wipro Technology</h3>
   <p class="text-sm text-slate-400">
@@ -692,6 +698,7 @@ if (window.lucide) {
 ========================= */
 const panel = document.getElementById('hg-nexus-panel');
 const closeBtn = document.getElementById('hg-nexus-close');
+const launcher = document.getElementById('hg-nexus-launcher');
 
 function openNexus() {
   panel?.classList.remove('scale-0', 'opacity-0');
@@ -700,7 +707,11 @@ function openNexus() {
 function closeNexus() {
   panel?.classList.add('scale-0', 'opacity-0');
 }
-
+/* =========================
+   Events
+========================= */
+launcher.addEventListener('click', openNexus);
+closeBtn.addEventListener('click', closeNexus);
 // Auto open / close on load
 window.addEventListener('load', () => {
   if (!panel) return;
@@ -714,8 +725,6 @@ window.addEventListener('load', () => {
   }
 });
 
-// Close button
-closeBtn?.addEventListener('click', closeNexus);
 
 /* =========================
    TESTIMONIAL SLIDER
@@ -841,6 +850,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

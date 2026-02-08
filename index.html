@@ -601,22 +601,67 @@
 </div>
 </section>
 
-<!-- CTA -->
-<section class="max-w-4xl mx-auto text-center mb-24">
-  <div class="glass p-11">
-    <h2 class="text-3xl font-extrabold mb-4">
-      Let’s Build Intelligent Automation
-    </h2>
-    <p class="text-slate-400 mb-8">
-      Open to consulting, freelance engagements, and senior architecture roles.
-    </p>
-    <a href="mailto:himanshume.gla@gmail.com"
-       class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-bold">
-      <i data-lucide="send"></i> Start a Conversation
-    </a>
+<!-- RECOMMENDATIONS -->
+<section class="max-w-6xl mx-auto mb-24">
+  <h2 class="text-2xl font-bold mb-10 flex items-center gap-3">
+    <i data-lucide="quote" class="text-blue-600"></i>
+    What People Say
+  </h2>
+
+  <div class="relative overflow-hidden">
+    <div id="testimonial-track" class="flex transition-transform duration-700">
+
+      <!-- Slide 1 -->
+      <div class="min-w-full px-6">
+        <div class="glass p-8">
+          <p class="italic text-slate-700 mb-6">
+            “Himanshu is a good team player. Possesses strong development skills, is well spoken,
+            and demonstrates excellent communication ability.”
+          </p>
+          <div>
+            <p class="font-bold">Vineet Jain</p>
+            <p class="text-sm text-slate-500">
+              General Manager – Infrastructure Services (On-Prem & Cloud)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="min-w-full px-6">
+        <div class="glass p-8">
+          <p class="italic text-slate-700 mb-6">
+            “Himanshu is one of the most dependable professionals I’ve worked with.
+            He demonstrates excellent team leadership and strong commitment to delivery.”
+          </p>
+          <div>
+            <p class="font-bold">Vinay Bhavsar, PMP</p>
+            <p class="text-sm text-slate-500">
+              Business Problem Solver & IT Service Delivery Manager
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="min-w-full px-6">
+        <div class="glass p-8">
+          <p class="italic text-slate-700 mb-6">
+            “Himanshu is extraordinarily resourceful, passionate, and reliable.
+            He consistently delivers quality outcomes within tight timelines.”
+          </p>
+          <div>
+            <p class="font-bold">Gulshan Lal Gupta</p>
+            <p class="text-sm text-slate-500">
+              Enterprise Architect
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
-
 
 <script>
   const openBtn = document.getElementById('hg-nexus-open');
@@ -643,6 +688,14 @@
       input.focus();
     }
   });
+  let index = 0;
+  const track = document.getElementById("testimonial-track");
+  const total = track.children.length;
+
+  setInterval(() => {
+    index = (index + 1) % total;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 5000);
   lucide.createIcons();
 /* ========= KNOWLEDGE BASE ========= */
 const KB = {
@@ -744,6 +797,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

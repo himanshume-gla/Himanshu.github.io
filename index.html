@@ -41,7 +41,7 @@
 <div id="hg-nexus-panel"
   class="fixed top-0 right-0 h-full w-[360px] bg-white
          border-l border-slate-200 shadow-2xl
-         transform translate-x-full transition-transform duration-300
+         transition-transform duration-300
          z-50 flex flex-col">
 
   <!-- Header -->
@@ -528,6 +528,19 @@
   closeBtn.addEventListener('click', () => {
     panel.classList.add('translate-x-full');
   });
+    window.addEventListener('load', () => {
+    const input = document.querySelector('#hg-nexus-panel input');
+    if (input) input.focus();
+  });
+      if (window.innerWidth < 768 && panel) {
+      panel.classList.add('translate-x-full');
+    }
+
+    // Auto-focus on desktop
+    if (window.innerWidth >= 768 && input) {
+      input.focus();
+    }
+  });
   lucide.createIcons();
 /* ========= KNOWLEDGE BASE ========= */
 const KB = {
@@ -629,6 +642,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

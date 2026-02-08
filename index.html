@@ -51,7 +51,12 @@
   opacity: 0;
   pointer-events: none;
 }
-
+#hg-nexus-panel.glass:hover {
+  transform: none;
+}
+#hg-nexus-launcher {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
   </style>
 </head>
 <!-- HG NEXUS SIDE PANEL -->
@@ -68,6 +73,8 @@
       class="absolute top-3 right-3 text-slate-400 hover:text-red-500">
       ✕
     </button>
+
+  </div>
     <!-- HG Nexus Launcher -->
 <button
   id="hg-nexus-launcher"
@@ -76,8 +83,7 @@
 >
   <i data-lucide="bot"></i>
 </button>
-  </div>
-
+  
   <!-- Content -->
   <div class="flex-1 p-5 text-sm text-slate-700 space-y-4 overflow-y-auto">
     <p>👋 Hello. I’m <b>HG Nexus</b>.</p>
@@ -700,28 +706,30 @@ const panel = document.getElementById('hg-nexus-panel');
 const closeBtn = document.getElementById('hg-nexus-close');
 const launcher = document.getElementById('hg-nexus-launcher');
 
-function openNexus() {
-  panel?.classList.remove('scale-0', 'opacity-0');
+function showPanel() {
+  panel.classList.remove('scale-0', 'opacity-0');
+  launcher.classList.add('hidden');
 }
 
-function closeNexus() {
-  panel?.classList.add('scale-0', 'opacity-0');
+function minimizePanel() {
+  panel.classList.add('scale-0', 'opacity-0');
+  launcher.classList.remove('hidden');
 }
 /* =========================
    Events
 ========================= */
-launcher.addEventListener('click', openNexus);
-closeBtn.addEventListener('click', closeNexus);
-// Auto open / close on load
-window.addEventListener('load', () => {
-  if (!panel) return;
+/* Close = Minimize (NOT destroy) */
+closeBtn.addEventListener('click', minimizePanel);
 
+/* Launcher click = Restore */
+launcher.addEventListener('click', showPanel);
+// Auto open / close on load
+/* Auto behavior */
+window.addEventListener('load', () => {
   if (window.innerWidth >= 768) {
-    openNexus(); // Desktop
-    const input = panel.querySelector('input');
-    input && input.focus();
+    showPanel();      // Desktop: open
   } else {
-    closeNexus(); // Mobile
+    minimizePanel(); // Mobile: minimized
   }
 });
 
@@ -850,6 +858,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

@@ -37,62 +37,55 @@
     }
   </style>
 </head>
-<!-- PORTFOLIO ASSISTANT -->
-<!-- PORTFOLIO COPILOT -->
-<div id="copilotToggle"
-     class="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-3 rounded-xl shadow-lg cursor-pointer hover:bg-blue-700 z-50 flex items-center gap-2">
-  <i data-lucide="bot"></i>
-  <span class="font-semibold text-sm">Ask Copilot</span>
+<!-- HG NEXUS FLOATING ASSISTANT -->
+<div id="hg-nexus-container" class="fixed bottom-6 right-6 z-50">
+
+  <!-- Toggle Button -->
+  <button id="hg-nexus-toggle"
+    class="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-xl transition">
+    <i data-lucide="sparkles" class="w-5 h-5"></i>
+    <span class="font-semibold text-sm">HG Nexus</span>
+  </button>
+
+  <!-- Assistant Panel -->
+  <div id="hg-nexus-panel"
+    class="hidden mt-4 w-80 bg-white border border-slate-200 rounded-2xl shadow-2xl">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center px-5 py-4 border-b">
+      <div>
+        <h3 class="font-bold text-slate-900">HG Nexus</h3>
+        <p class="text-xs text-slate-500">Himanshu’s Executive Assistant</p>
+      </div>
+      <button onclick="toggleNexus()" class="text-slate-400 hover:text-slate-600">
+        ✕
+      </button>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="p-4 text-sm text-slate-700 space-y-3 max-h-60 overflow-y-auto">
+      <p>👋 Hello. I’m <b>HG Nexus</b>.</p>
+      <p>I can help with:</p>
+      <ul class="list-disc ml-5 text-slate-600">
+        <li>Experience & skills</li>
+        <li>Industry background</li>
+        <li>Career highlights</li>
+        <li>Contact & availability</li>
+      </ul>
+    </div>
+
+    <!-- Input -->
+    <div class="border-t px-4 py-3">
+      <input
+        type="text"
+        placeholder="Ask about Himanshu’s experience..."
+        class="w-full text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+  </div>
+
 </div>
 
-<aside id="copilotPanel"
-       class="hidden fixed top-0 right-0 h-full w-[380px] bg-white border-l border-slate-200 shadow-2xl z-50 flex flex-col">
-
-  <!-- Header -->
-  <div class="p-4 border-b flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <i data-lucide="bot" class="text-blue-600"></i>
-      <h3 class="font-bold text-slate-900">Portfolio Copilot</h3>
-    </div>
-    <button onclick="toggleCopilot()" class="text-slate-500 hover:text-slate-900">
-      ✕
-    </button>
-  </div>
-
-  <!-- Intro -->
-  <div class="p-4 text-sm text-slate-600">
-    Ask about experience, skills, industries, or how to contact Himanshu.
-  </div>
-
-  <!-- Suggestions -->
-  <div class="px-4 pb-3 flex flex-wrap gap-2 text-xs">
-    <button onclick="quickAsk('experience')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Experience</button>
-    <button onclick="quickAsk('skills')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Skills</button>
-    <button onclick="quickAsk('industries')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Industries</button>
-    <button onclick="quickAsk('certifications')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Certifications</button>
-  </div>
-
-  <!-- Chat -->
-  <div id="chatArea"
-       class="flex-1 px-4 py-2 space-y-3 overflow-y-auto text-sm text-slate-800">
-    <div class="bg-slate-100 p-3 rounded-lg">
-      👋 Hi! I’m your portfolio copilot. How can I help?
-    </div>
-  </div>
-
-  <!-- Input -->
-  <div class="p-4 border-t flex gap-2">
-    <input id="chatInput"
-           type="text"
-           placeholder="Ask Copilot…"
-           class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-200"/>
-    <button id="sendBtn"
-            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">
-      →
-    </button>
-  </div>
-
-</aside>
 <body class="px-6 md:px-12 lg:px-24 py-12">
 
 <!-- HERO -->
@@ -529,6 +522,13 @@
 
 
 <script>
+    function toggleNexus() {
+    const panel = document.getElementById('hg-nexus-panel');
+    panel.classList.toggle('hidden');
+  }
+
+  document.getElementById('hg-nexus-toggle')
+    .addEventListener('click', toggleNexus);
   lucide.createIcons();
 /* ========= KNOWLEDGE BASE ========= */
 const KB = {
@@ -630,6 +630,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

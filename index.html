@@ -37,6 +37,37 @@
     }
   </style>
 </head>
+<!-- PORTFOLIO ASSISTANT -->
+<div id="assistantButton"
+     class="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg cursor-pointer hover:bg-blue-700 z-50">
+  <i data-lucide="bot"></i>
+</div>
+
+<div id="assistantPanel"
+     class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50">
+
+  <div class="p-4 border-b flex items-center gap-2">
+    <i data-lucide="bot" class="text-blue-600"></i>
+    <h3 class="font-bold text-slate-900">Portfolio Assistant</h3>
+  </div>
+
+  <div id="chatArea" class="p-4 space-y-3 text-sm text-slate-700 max-h-72 overflow-y-auto">
+    <div class="bg-slate-100 p-3 rounded-lg">
+      👋 Hi! I can help with experience, skills, industries, certifications, or contacting Himanshu.
+    </div>
+  </div>
+
+  <div class="p-3 border-t flex gap-2">
+    <input id="chatInput"
+           type="text"
+           placeholder="Ask about skills, experience..."
+           class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-200"/>
+    <button id="sendBtn"
+            class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700">
+      Send
+    </button>
+  </div>
+</div>
 
 <body class="px-6 md:px-12 lg:px-24 py-12">
 
@@ -472,12 +503,81 @@
   </div>
 </section>
 
+
 <script>
   lucide.createIcons();
+/* ===== RESUME KNOWLEDGE BASE ===== */
+const resumeData = {
+  experience: "Himanshu has 10+ years of experience in RPA, AI-driven automation, and ITSM across Cognizant, HCL, and Wipro.",
+  industries: "He has worked in Banking & BFSI, Telecom, and Enterprise IT / ITSM environments.",
+  skills: "Key skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, ServiceNow, and BMC Remedy.",
+  certifications: "Certified in Microsoft Power Platform (PL-400, PL-500), Blue Prism, Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC.",
+  achievements: "Delivered up to 90% efficiency gains in BFSI automations and reduced test case creation effort by 80% using GenAI.",
+  contact: "You can contact Himanshu via email at himanshume.gla@gmail.com or use the contact button on this page.",
+  resume: "You can download the resume using the Resume button in the hero section."
+};
+
+/* ===== CHAT LOGIC ===== */
+function getBotResponse(message) {
+  const msg = message.toLowerCase();
+
+  if (msg.includes("experience")) return resumeData.experience;
+  if (msg.includes("industry")) return resumeData.industries;
+  if (msg.includes("skill")) return resumeData.skills;
+  if (msg.includes("certification")) return resumeData.certifications;
+  if (msg.includes("achievement")) return resumeData.achievements;
+  if (msg.includes("contact") || msg.includes("email")) return resumeData.contact;
+  if (msg.includes("resume")) return resumeData.resume;
+
+  return "I can help with experience, skills, industries, certifications, or contacting Himanshu. If you have a specific query, feel free to email directly.";
+}
+
+/* ===== UI HANDLERS ===== */
+const assistantBtn = document.getElementById("assistantButton");
+const assistantPanel = document.getElementById("assistantPanel");
+const sendBtn = document.getElementById("sendBtn");
+const chatInput = document.getElementById("chatInput");
+const chatArea = document.getElementById("chatArea");
+
+assistantBtn.onclick = () => {
+  assistantPanel.classList.toggle("hidden");
+};
+
+sendBtn.onclick = sendMessage;
+chatInput.addEventListener("keypress", e => {
+  if (e.key === "Enter") sendMessage();
+});
+
+function sendMessage() {
+  const text = chatInput.value.trim();
+  if (!text) return;
+
+  appendMessage(text, "user");
+  chatInput.value = "";
+
+  setTimeout(() => {
+    const reply = getBotResponse(text);
+    appendMessage(reply, "bot");
+  }, 400);
+}
+
+function appendMessage(text, sender) {
+  const div = document.createElement("div");
+  div.className = sender === "user"
+    ? "bg-blue-600 text-white p-3 rounded-lg text-right"
+    : "bg-slate-100 p-3 rounded-lg";
+  div.textContent = text;
+  chatArea.appendChild(div);
+  chatArea.scrollTop = chatArea.scrollHeight;
+}
 </script>
+
+  
+
 
 </body>
 </html>
+
 
 
 

@@ -35,14 +35,30 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    /* =========================
+   HG Nexus Animations
+========================= */
+#hg-nexus-panel {
+  transform-origin: bottom right;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.scale-0 {
+  transform: scale(0);
+}
+
+.opacity-0 {
+  opacity: 0;
+  pointer-events: none;
+}
+
   </style>
 </head>
 <!-- HG NEXUS SIDE PANEL -->
 <div id="hg-nexus-panel"
-  class="fixed top-0 right-0 h-full w-[360px] bg-white
-         border-l border-slate-200 shadow-2xl
-         transition-transform duration-300
-         z-50 flex flex-col">
+  class="fixed bottom-6 right-6 w-[360px] max-h-[520px]
+            bg-white shadow-2xl rounded-2xl border border-slate-200
+            flex flex-col transition-transform duration-300">
 
   <!-- Header -->
   <div class="flex items-center justify-between px-6 py-4 border-b">
@@ -51,7 +67,7 @@
       <p class="text-xs text-slate-500">Himanshu’s Executive Assistant</p>
     </div>
     <button id="hg-nexus-close"
-      class="text-slate-400 hover:text-slate-600 text-xl">
+      class="absolute top-3 right-3 text-slate-400 hover:text-red-500">
       ✕
     </button>
   </div>
@@ -664,129 +680,157 @@
 </section>
 
 <script>
-  const openBtn = document.getElementById('hg-nexus-open');
-  const closeBtn = document.getElementById('hg-nexus-close');
-  const panel = document.getElementById('hg-nexus-panel');
+/* =========================
+   LUCIDE ICONS
+========================= */
+if (window.lucide) {
+  lucide.createIcons();
+}
 
-  openBtn.addEventListener('click', () => {
-    panel.classList.remove('translate-x-full');
-  });
+/* =========================
+   HG NEXUS PANEL LOGIC
+========================= */
+const panel = document.getElementById('hg-nexus-panel');
+const closeBtn = document.getElementById('hg-nexus-close');
 
-  closeBtn.addEventListener('click', () => {
-    panel.classList.add('translate-x-full');
-  });
-    window.addEventListener('load', () => {
-    const input = document.querySelector('#hg-nexus-panel input');
-    if (input) input.focus();
-  });
-      if (window.innerWidth < 768 && panel) {
-      panel.classList.add('translate-x-full');
-    }
+function openNexus() {
+  panel?.classList.remove('scale-0', 'opacity-0');
+}
 
-    // Auto-focus on desktop
-    if (window.innerWidth >= 768 && input) {
-      input.focus();
-    }
-  });
-  let index = 0;
-  const track = document.getElementById("testimonial-track");
-  const total = track.children.length;
+function closeNexus() {
+  panel?.classList.add('scale-0', 'opacity-0');
+}
 
+// Auto open / close on load
+window.addEventListener('load', () => {
+  if (!panel) return;
+
+  if (window.innerWidth >= 768) {
+    openNexus(); // Desktop
+    const input = panel.querySelector('input');
+    input && input.focus();
+  } else {
+    closeNexus(); // Mobile
+  }
+});
+
+// Close button
+closeBtn?.addEventListener('click', closeNexus);
+
+/* =========================
+   TESTIMONIAL SLIDER
+========================= */
+const track = document.getElementById("testimonial-track");
+let index = 0;
+
+if (track && track.children.length > 1) {
   setInterval(() => {
-    index = (index + 1) % total;
+    index = (index + 1) % track.children.length;
     track.style.transform = `translateX(-${index * 100}%)`;
   }, 5000);
-  lucide.createIcons();
-/* ========= KNOWLEDGE BASE ========= */
+}
+
+/* =========================
+   HG NEXUS KNOWLEDGE BASE
+========================= */
 const KB = {
   experience: {
     keywords: ["experience", "career", "background", "years"],
-    response: "Himanshu has 10+ years of experience delivering RPA, AI-driven automation, and ITSM solutions across Cognizant, HCL, and Wipro."
+    response:
+      "Himanshu has 10+ years of experience delivering RPA, AI-driven automation, and ITSM solutions across Cognizant, HCL, and Wipro."
   },
   skills: {
     keywords: ["skills", "technology", "tools", "stack"],
-    response: "Core skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, ServiceNow, and BMC Remedy."
+    response:
+      "Core skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, ServiceNow, and BMC Remedy."
   },
   industries: {
     keywords: ["industry", "domain", "banking", "telecom"],
-    response: "Industry experience spans Banking & BFSI, Telecom, and Enterprise IT / ITSM environments."
+    response:
+      "Industry experience spans Banking & BFSI, Telecom, and Enterprise IT / ITSM environments."
   },
   certifications: {
     keywords: ["certification", "certified"],
-    response: "Certified in Microsoft Power Platform (PL-400, PL-500), Blue Prism, Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC."
+    response:
+      "Certified in Microsoft Power Platform (PL-400, PL-500), Blue Prism, Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC."
   },
   contact: {
     keywords: ["contact", "email", "reach"],
-    response: "You can contact Himanshu at himanshume.gla@gmail.com or use the Contact button on this page."
+    response:
+      "You can contact Himanshu at himanshume.gla@gmail.com or use the Contact button on this page."
   },
   resume: {
     keywords: ["resume", "cv", "download"],
-    response: "You can download the resume using the Resume button in the hero section."
+    response:
+      "You can download the resume using the Resume button in the hero section."
   }
 };
 
-/* ========= TOGGLE ========= */
-const panel = document.getElementById("copilotPanel");
-document.getElementById("copilotToggle").onclick = toggleCopilot;
-
-function toggleCopilot() {
-  panel.classList.toggle("hidden");
-}
-
-/* ========= CHAT ========= */
+/* =========================
+   CHAT HANDLERS
+========================= */
 const chatArea = document.getElementById("chatArea");
 const chatInput = document.getElementById("chatInput");
-document.getElementById("sendBtn").onclick = sendMessage;
-chatInput.addEventListener("keypress", e => e.key === "Enter" && sendMessage());
+const sendBtn = document.getElementById("sendBtn");
 
-function quickAsk(type) {
-  append(type, "user");
-  append(KB[type].response, "bot");
-}
+sendBtn?.addEventListener("click", sendMessage);
+chatInput?.addEventListener("keypress", e => {
+  if (e.key === "Enter") sendMessage();
+});
 
 function sendMessage() {
   const text = chatInput.value.trim();
   if (!text) return;
-  append(text, "user");
+
+  appendMessage(text, "user");
   chatInput.value = "";
 
   setTimeout(() => {
-    const reply = match(text);
-    reply ? append(reply, "bot") : emailFallback(text);
+    const reply = matchResponse(text);
+    reply ? appendMessage(reply, "bot") : emailFallback(text);
   }, 300);
 }
 
-function match(msg) {
-  msg = msg.toLowerCase();
-  for (const k in KB) {
-    if (KB[k].keywords.some(w => msg.includes(w))) {
-      return KB[k].response;
+function matchResponse(msg) {
+  const text = msg.toLowerCase();
+  for (const key in KB) {
+    if (KB[key].keywords.some(k => text.includes(k))) {
+      return KB[key].response;
     }
   }
   return null;
 }
 
-function append(text, sender) {
+function appendMessage(text, sender) {
   const div = document.createElement("div");
-  div.className = sender === "user"
-    ? "bg-blue-600 text-white p-3 rounded-lg text-right"
-    : "bg-slate-100 p-3 rounded-lg";
+  div.className =
+    sender === "user"
+      ? "bg-blue-600 text-white p-3 rounded-lg text-right"
+      : "bg-slate-100 p-3 rounded-lg";
+
   div.textContent = text;
   chatArea.appendChild(div);
   chatArea.scrollTop = chatArea.scrollHeight;
 }
 
-/* ========= EMAIL ESCALATION ========= */
+/* =========================
+   EMAIL ESCALATION
+========================= */
 function emailFallback(question) {
   const div = document.createElement("div");
-  div.className = "bg-yellow-50 border border-yellow-200 p-3 rounded-lg text-sm";
+  div.className =
+    "bg-yellow-50 border border-yellow-200 p-3 rounded-lg text-sm";
+
   div.innerHTML = `
     I may not have that information yet.<br><br>
     <form action="https://formsubmit.co/himanshume.gla@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Portfolio Copilot Query">
+      <input type="hidden" name="_subject" value="HG Nexus – Portfolio Query">
       <input type="hidden" name="Question" value="${question}">
-      <textarea name="Message" required class="w-full border rounded p-2 text-sm" placeholder="Add details..."></textarea>
-      <button type="submit" class="mt-2 bg-blue-600 text-white px-3 py-2 rounded">
+      <textarea name="Message" required
+        class="w-full border rounded p-2 text-sm"
+        placeholder="Add more details..."></textarea>
+      <button type="submit"
+        class="mt-2 bg-blue-600 text-white px-3 py-2 rounded">
         Send via Email
       </button>
     </form>
@@ -797,6 +841,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

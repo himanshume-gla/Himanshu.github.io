@@ -37,51 +37,46 @@
     }
   </style>
 </head>
-<!-- HG NEXUS FLOATING ASSISTANT -->
-<div id="hg-nexus-container" class="fixed bottom-6 right-6 z-50">
+<!-- HG NEXUS SIDE PANEL -->
+<div id="hg-nexus-panel"
+  class="fixed top-0 right-0 h-full w-[360px] bg-white
+         border-l border-slate-200 shadow-2xl
+         transform translate-x-full transition-transform duration-300
+         z-50 flex flex-col">
 
-  <!-- Toggle Button -->
-  <button id="hg-nexus-toggle"
-    class="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-xl transition">
-    <i data-lucide="sparkles" class="w-5 h-5"></i>
-    <span class="font-semibold text-sm">HG Nexus</span>
-  </button>
-
-  <!-- Assistant Panel -->
-  <div id="hg-nexus-panel"
-    class="hidden mt-4 w-80 bg-white border border-slate-200 rounded-2xl shadow-2xl">
-
-    <!-- Header -->
-    <div class="flex justify-between items-center px-5 py-4 border-b">
-      <div>
-        <h3 class="font-bold text-slate-900">HG Nexus</h3>
-        <p class="text-xs text-slate-500">Himanshu’s Executive Assistant</p>
-      </div>
-      <button onclick="toggleNexus()" class="text-slate-400 hover:text-slate-600">
-        ✕
-      </button>
+  <!-- Header -->
+  <div class="flex items-center justify-between px-6 py-4 border-b">
+    <div>
+      <h3 class="font-bold text-slate-900">HG Nexus</h3>
+      <p class="text-xs text-slate-500">Himanshu’s Executive Assistant</p>
     </div>
+    <button id="hg-nexus-close"
+      class="text-slate-400 hover:text-slate-600 text-xl">
+      ✕
+    </button>
+  </div>
 
-    <!-- Chat Area -->
-    <div class="p-4 text-sm text-slate-700 space-y-3 max-h-60 overflow-y-auto">
-      <p>👋 Hello. I’m <b>HG Nexus</b>.</p>
-      <p>I can help with:</p>
-      <ul class="list-disc ml-5 text-slate-600">
-        <li>Experience & skills</li>
-        <li>Industry background</li>
-        <li>Career highlights</li>
-        <li>Contact & availability</li>
-      </ul>
-    </div>
+  <!-- Content -->
+  <div class="flex-1 p-5 text-sm text-slate-700 space-y-4 overflow-y-auto">
+    <p>👋 Hello. I’m <b>HG Nexus</b>.</p>
+    <p>I can help with:</p>
+    <ul class="list-disc ml-5 text-slate-600 space-y-1">
+      <li>Experience & skills</li>
+      <li>Industry background</li>
+      <li>Career highlights</li>
+      <li>Contact & availability</li>
+    </ul>
+  </div>
 
-    <!-- Input -->
-    <div class="border-t px-4 py-3">
-      <input
-        type="text"
-        placeholder="Ask about Himanshu’s experience..."
-        class="w-full text-sm px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-    </div>
+  <!-- Input -->
+  <div class="border-t p-4">
+    <input
+      type="text"
+      placeholder="Ask about Himanshu’s experience..."
+      class="w-full px-4 py-3 text-sm rounded-xl border
+             border-slate-300 focus:outline-none
+             focus:ring-2 focus:ring-blue-500"
+    />
   </div>
 
 </div>
@@ -522,13 +517,17 @@
 
 
 <script>
-    function toggleNexus() {
-    const panel = document.getElementById('hg-nexus-panel');
-    panel.classList.toggle('hidden');
-  }
+  const openBtn = document.getElementById('hg-nexus-open');
+  const closeBtn = document.getElementById('hg-nexus-close');
+  const panel = document.getElementById('hg-nexus-panel');
 
-  document.getElementById('hg-nexus-toggle')
-    .addEventListener('click', toggleNexus);
+  openBtn.addEventListener('click', () => {
+    panel.classList.remove('translate-x-full');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    panel.classList.add('translate-x-full');
+  });
   lucide.createIcons();
 /* ========= KNOWLEDGE BASE ========= */
 const KB = {
@@ -630,6 +629,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

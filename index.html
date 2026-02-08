@@ -38,58 +38,61 @@
   </style>
 </head>
 <!-- PORTFOLIO ASSISTANT -->
-<div id="assistantButton"
-     class="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg cursor-pointer hover:bg-blue-700 z-50">
+<!-- PORTFOLIO COPILOT -->
+<div id="copilotToggle"
+     class="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-3 rounded-xl shadow-lg cursor-pointer hover:bg-blue-700 z-50 flex items-center gap-2">
   <i data-lucide="bot"></i>
+  <span class="font-semibold text-sm">Ask Copilot</span>
 </div>
 
-<div id="assistantPanel"
-  <div class="p-3 border-t space-y-2">
+<aside id="copilotPanel"
+       class="hidden fixed top-0 right-0 h-full w-[380px] bg-white border-l border-slate-200 shadow-2xl z-50 flex flex-col">
 
-  <!-- Quick Actions -->
-  <div class="flex flex-wrap gap-2 text-xs">
-    <button onclick="quickAsk('skills')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Skills</button>
-    <button onclick="quickAsk('experience')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Experience</button>
-    <button onclick="quickAsk('industries')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Industries</button>
-    <button onclick="quickAsk('contact')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Contact</button>
-  </div>
-
-  <!-- Chat Input -->
-  <div class="flex gap-2">
-    <input id="chatInput"
-           type="text"
-           placeholder="Ask about skills, experience..."
-           class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-200"/>
-    <button id="sendBtn"
-            class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700">
-      Send
+  <!-- Header -->
+  <div class="p-4 border-b flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <i data-lucide="bot" class="text-blue-600"></i>
+      <h3 class="font-bold text-slate-900">Portfolio Copilot</h3>
+    </div>
+    <button onclick="toggleCopilot()" class="text-slate-500 hover:text-slate-900">
+      ✕
     </button>
   </div>
 
-</div>
-  <div class="p-4 border-b flex items-center gap-2">
-    <i data-lucide="bot" class="text-blue-600"></i>
-    <h3 class="font-bold text-slate-900">Portfolio Assistant</h3>
+  <!-- Intro -->
+  <div class="p-4 text-sm text-slate-600">
+    Ask about experience, skills, industries, or how to contact Himanshu.
   </div>
 
-  <div id="chatArea" class="p-4 space-y-3 text-sm text-slate-700 max-h-72 overflow-y-auto">
-    <div class="bg-slate-111 p-3 rounded-lg">
-      👋 Hi! I can help with experience, skills, industries, certifications, or contacting Himanshu.
+  <!-- Suggestions -->
+  <div class="px-4 pb-3 flex flex-wrap gap-2 text-xs">
+    <button onclick="quickAsk('experience')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Experience</button>
+    <button onclick="quickAsk('skills')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Skills</button>
+    <button onclick="quickAsk('industries')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Industries</button>
+    <button onclick="quickAsk('certifications')" class="px-3 py-1 bg-slate-100 rounded hover:bg-blue-100">Certifications</button>
+  </div>
+
+  <!-- Chat -->
+  <div id="chatArea"
+       class="flex-1 px-4 py-2 space-y-3 overflow-y-auto text-sm text-slate-800">
+    <div class="bg-slate-100 p-3 rounded-lg">
+      👋 Hi! I’m your portfolio copilot. How can I help?
     </div>
   </div>
 
-  <div class="p-3 border-t flex gap-2">
+  <!-- Input -->
+  <div class="p-4 border-t flex gap-2">
     <input id="chatInput"
            type="text"
-           placeholder="Ask about skills, experience..."
+           placeholder="Ask Copilot…"
            class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-200"/>
     <button id="sendBtn"
-            class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700">
-      Send
+            class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">
+      →
     </button>
   </div>
-</div>
 
+</aside>
 <body class="px-6 md:px-12 lg:px-24 py-12">
 
 <!-- HERO -->
@@ -530,24 +533,20 @@
 /* ========= KNOWLEDGE BASE ========= */
 const KB = {
   experience: {
-    keywords: ["experience", "career", "background", "years", "worked"],
-    response: "Himanshu has 11+ years of experience in RPA, AI-driven automation, and ITSM across Cognizant, HCL, and Wipro."
-  },
-  industries: {
-    keywords: ["industry", "domain", "banking", "telecom", "itsm"],
-    response: "He has worked across Banking & BFSI, Telecom, and Enterprise IT / ITSM environments."
+    keywords: ["experience", "career", "background", "years"],
+    response: "Himanshu has 10+ years of experience delivering RPA, AI-driven automation, and ITSM solutions across Cognizant, HCL, and Wipro."
   },
   skills: {
-    keywords: ["skill", "technology", "tools", "stack"],
-    response: "Core skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, Copilot Studio,BMC Remedy."
+    keywords: ["skills", "technology", "tools", "stack"],
+    response: "Core skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, ServiceNow, and BMC Remedy."
+  },
+  industries: {
+    keywords: ["industry", "domain", "banking", "telecom"],
+    response: "Industry experience spans Banking & BFSI, Telecom, and Enterprise IT / ITSM environments."
   },
   certifications: {
     keywords: ["certification", "certified"],
-    response: "Certified in Microsoft Power Platform (PL-400, PL-500), Microsoft Azure AI Engineer Associate (AI-112),Blue Prism Solution Designer(ASD01), Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC."
-  },
-  achievements: {
-    keywords: ["achievement", "impact", "result", "outcome"],
-    response: "Delivered up to 90% efficiency gains in BFSI automations and reduced test case creation effort by 80% using GenAI."
+    response: "Certified in Microsoft Power Platform (PL-400, PL-500), Blue Prism, Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC."
   },
   contact: {
     keywords: ["contact", "email", "reach"],
@@ -555,77 +554,72 @@ const KB = {
   },
   resume: {
     keywords: ["resume", "cv", "download"],
-    response: "You can download the resume using the Resume button at the top of this page."
+    response: "You can download the resume using the Resume button in the hero section."
   }
 };
 
-/* ========= MATCHING ENGINE ========= */
-function getBotResponse(message) {
-  const msg = message.toLowerCase();
+/* ========= TOGGLE ========= */
+const panel = document.getElementById("copilotPanel");
+document.getElementById("copilotToggle").onclick = toggleCopilot;
 
-  for (const key in KB) {
-    if (KB[key].keywords.some(k => msg.includes(k))) {
-      return KB[key].response;
-    }
-  }
-
-  return null; // triggers email fallback
+function toggleCopilot() {
+  panel.classList.toggle("hidden");
 }
 
-/* ========= UI ELEMENTS ========= */
-const assistantBtn = document.getElementById("assistantButton");
-const assistantPanel = document.getElementById("assistantPanel");
-const sendBtn = document.getElementById("sendBtn");
-const chatInput = document.getElementById("chatInput");
+/* ========= CHAT ========= */
 const chatArea = document.getElementById("chatArea");
-
-assistantBtn.onclick = () => assistantPanel.classList.toggle("hidden");
-sendBtn.onclick = sendMessage;
+const chatInput = document.getElementById("chatInput");
+document.getElementById("sendBtn").onclick = sendMessage;
 chatInput.addEventListener("keypress", e => e.key === "Enter" && sendMessage());
 
 function quickAsk(type) {
-  appendMessage(type, "user");
-  appendMessage(KB[type].response, "bot");
+  append(type, "user");
+  append(KB[type].response, "bot");
 }
 
 function sendMessage() {
   const text = chatInput.value.trim();
   if (!text) return;
-
-  appendMessage(text, "user");
+  append(text, "user");
   chatInput.value = "";
 
   setTimeout(() => {
-    const reply = getBotResponse(text);
-    if (reply) {
-      appendMessage(reply, "bot");
-    } else {
-      showEmailFallback(text);
-    }
-  }, 400);
+    const reply = match(text);
+    reply ? append(reply, "bot") : emailFallback(text);
+  }, 300);
 }
 
-function appendMessage(text, sender) {
+function match(msg) {
+  msg = msg.toLowerCase();
+  for (const k in KB) {
+    if (KB[k].keywords.some(w => msg.includes(w))) {
+      return KB[k].response;
+    }
+  }
+  return null;
+}
+
+function append(text, sender) {
   const div = document.createElement("div");
   div.className = sender === "user"
     ? "bg-blue-600 text-white p-3 rounded-lg text-right"
-    : "bg-slate-111 p-3 rounded-lg";
+    : "bg-slate-100 p-3 rounded-lg";
   div.textContent = text;
   chatArea.appendChild(div);
   chatArea.scrollTop = chatArea.scrollHeight;
 }
 
-/* ========= EMAIL FALLBACK ========= */
-function showEmailFallback(question) {
+/* ========= EMAIL ESCALATION ========= */
+function emailFallback(question) {
   const div = document.createElement("div");
   div.className = "bg-yellow-50 border border-yellow-200 p-3 rounded-lg text-sm";
   div.innerHTML = `
     I may not have that information yet.<br><br>
     <form action="https://formsubmit.co/himanshume.gla@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Portfolio Assistant Query">
+      <input type="hidden" name="_subject" value="Portfolio Copilot Query">
       <input type="hidden" name="Question" value="${question}">
       <textarea name="Message" required class="w-full border rounded p-2 text-sm" placeholder="Add details..."></textarea>
-      <button type="submit" class="mt-2 bg-blue-600 text-white px-3 py-2 rounded text-sm">
+      <button type="submit" class="mt-2 bg-blue-600 text-white px-3 py-2 rounded">
         Send via Email
       </button>
     </form>
@@ -636,6 +630,7 @@ function showEmailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

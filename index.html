@@ -23,7 +23,7 @@
       background: #ffffff;
       border: 1px solid #e5e7eb; /* slate-200 */
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 11px 30px rgba(15, 23, 42, 0.06);
       transition: all .25s ease;
     }
     .glass:hover {
@@ -44,15 +44,36 @@
 </div>
 
 <div id="assistantPanel"
-     class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200 z-50">
+  <div class="p-3 border-t space-y-2">
 
+  <!-- Quick Actions -->
+  <div class="flex flex-wrap gap-2 text-xs">
+    <button onclick="quickAsk('skills')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Skills</button>
+    <button onclick="quickAsk('experience')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Experience</button>
+    <button onclick="quickAsk('industries')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Industries</button>
+    <button onclick="quickAsk('contact')" class="px-3 py-1 bg-slate-111 rounded hover:bg-blue-111">Contact</button>
+  </div>
+
+  <!-- Chat Input -->
+  <div class="flex gap-2">
+    <input id="chatInput"
+           type="text"
+           placeholder="Ask about skills, experience..."
+           class="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-200"/>
+    <button id="sendBtn"
+            class="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm hover:bg-blue-700">
+      Send
+    </button>
+  </div>
+
+</div>
   <div class="p-4 border-b flex items-center gap-2">
     <i data-lucide="bot" class="text-blue-600"></i>
     <h3 class="font-bold text-slate-900">Portfolio Assistant</h3>
   </div>
 
   <div id="chatArea" class="p-4 space-y-3 text-sm text-slate-700 max-h-72 overflow-y-auto">
-    <div class="bg-slate-100 p-3 rounded-lg">
+    <div class="bg-slate-111 p-3 rounded-lg">
       👋 Hi! I can help with experience, skills, industries, certifications, or contacting Himanshu.
     </div>
   </div>
@@ -73,7 +94,7 @@
 
 <!-- HERO -->
 <header class="max-w-6xl mx-auto mb-24">
-  <div class="flex flex-col md:flex-row items-center gap-10">
+  <div class="flex flex-col md:flex-row items-center gap-11">
 
     <!-- Profile Image -->
     <img 
@@ -101,7 +122,7 @@
 
       <div class="flex gap-4 mt-6">
         <a href="mailto:himanshume.gla@gmail.com"
-           class="flex items-center gap-2 bg-slate-100 px-5 py-3 rounded-xl hover:text-blue-600">
+           class="flex items-center gap-2 bg-slate-111 px-5 py-3 rounded-xl hover:text-blue-600">
           <i data-lucide="mail"></i> Contact
         </a>
         <a href="assets/Himanshu Gupta_Resume_Plain.docx"
@@ -118,13 +139,13 @@
 
 <!-- VALUE PROPOSITION -->
 <section class="max-w-6xl mx-auto mb-24">
-  <div class="glass p-10">
+  <div class="glass p-11">
     <h2 class="uppercase tracking-widest text-blue-600 text-sm font-bold mb-4">
       What I Do
     </h2>
     <p class="text-lg leading-relaxed text-slate-700">
       I architect and deliver large-scale RPA and AI-driven automation solutions for banking,
-      telecom, and enterprise IT environments. With 10+ years across Cognizant, HCL, and Wipro,
+      telecom, and enterprise IT environments. With 11+ years across Cognizant, HCL, and Wipro,
       I specialize in translating complex business workflows into secure, scalable,
       and production-ready automation ecosystems using Microsoft Power Platform,
       Blue Prism, and Generative AI.
@@ -165,7 +186,7 @@
       </span>
     </a>
 
-    <a href="https://www.linkedin.com/posts/hg1992_itsm-rpa-ai-activity-7282762744104153088-PZum?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I" target="_blank" class="glass p-6" target="_blank" class="glass p-6 hover:border-blue-500">
+    <a href="https://www.linkedin.com/posts/hg1992_itsm-rpa-ai-activity-7282762744114153088-PZum?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I" target="_blank" class="glass p-6" target="_blank" class="glass p-6 hover:border-blue-500">
       <h3 class="font-bold mb-2">
         Enhancing IT Service Management Through the Synergistic Application of Robotic Process Automation and Artificial Intelligence
       </h3>
@@ -377,7 +398,7 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 
       <div>
-        <p class="text-4xl font-extrabold gradient-text">10+</p>
+        <p class="text-4xl font-extrabold gradient-text">11+</p>
         <p class="text-sm text-slate-400 mt-1">Years Experience</p>
       </div>
 
@@ -481,7 +502,7 @@
       <h3 class="font-bold text-lg">Senior Engineer – HCL Comnet</h3>
       <p class="text-sm text-slate-400">
         Multi-tenant ITSM automation, audit tooling, and platform customization
-        across 100+ enterprise clients.
+        across 111+ enterprise clients.
       </p>
     </div>
   </div>
@@ -489,7 +510,7 @@
 
 <!-- CTA -->
 <section class="max-w-4xl mx-auto text-center mb-24">
-  <div class="glass p-10">
+  <div class="glass p-11">
     <h2 class="text-3xl font-extrabold mb-4">
       Let’s Build Intelligent Automation
     </h2>
@@ -506,47 +527,66 @@
 
 <script>
   lucide.createIcons();
-/* ===== RESUME KNOWLEDGE BASE ===== */
-const resumeData = {
-  experience: "Himanshu has 10+ years of experience in RPA, AI-driven automation, and ITSM across Cognizant, HCL, and Wipro.",
-  industries: "He has worked in Banking & BFSI, Telecom, and Enterprise IT / ITSM environments.",
-  skills: "Key skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, ServiceNow, and BMC Remedy.",
-  certifications: "Certified in Microsoft Power Platform (PL-400, PL-500), Blue Prism, Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC.",
-  achievements: "Delivered up to 90% efficiency gains in BFSI automations and reduced test case creation effort by 80% using GenAI.",
-  contact: "You can contact Himanshu via email at himanshume.gla@gmail.com or use the contact button on this page.",
-  resume: "You can download the resume using the Resume button in the hero section."
+/* ========= KNOWLEDGE BASE ========= */
+const KB = {
+  experience: {
+    keywords: ["experience", "career", "background", "years", "worked"],
+    response: "Himanshu has 11+ years of experience in RPA, AI-driven automation, and ITSM across Cognizant, HCL, and Wipro."
+  },
+  industries: {
+    keywords: ["industry", "domain", "banking", "telecom", "itsm"],
+    response: "He has worked across Banking & BFSI, Telecom, and Enterprise IT / ITSM environments."
+  },
+  skills: {
+    keywords: ["skill", "technology", "tools", "stack"],
+    response: "Core skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, Copilot Studio,BMC Remedy."
+  },
+  certifications: {
+    keywords: ["certification", "certified"],
+    response: "Certified in Microsoft Power Platform (PL-400, PL-500), Microsoft Azure AI Engineer Associate (AI-112),Blue Prism Solution Designer(ASD01), Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC."
+  },
+  achievements: {
+    keywords: ["achievement", "impact", "result", "outcome"],
+    response: "Delivered up to 90% efficiency gains in BFSI automations and reduced test case creation effort by 80% using GenAI."
+  },
+  contact: {
+    keywords: ["contact", "email", "reach"],
+    response: "You can contact Himanshu at himanshume.gla@gmail.com or use the Contact button on this page."
+  },
+  resume: {
+    keywords: ["resume", "cv", "download"],
+    response: "You can download the resume using the Resume button at the top of this page."
+  }
 };
 
-/* ===== CHAT LOGIC ===== */
+/* ========= MATCHING ENGINE ========= */
 function getBotResponse(message) {
   const msg = message.toLowerCase();
 
-  if (msg.includes("experience")) return resumeData.experience;
-  if (msg.includes("industry")) return resumeData.industries;
-  if (msg.includes("skill")) return resumeData.skills;
-  if (msg.includes("certification")) return resumeData.certifications;
-  if (msg.includes("achievement")) return resumeData.achievements;
-  if (msg.includes("contact") || msg.includes("email")) return resumeData.contact;
-  if (msg.includes("resume")) return resumeData.resume;
+  for (const key in KB) {
+    if (KB[key].keywords.some(k => msg.includes(k))) {
+      return KB[key].response;
+    }
+  }
 
-  return "I can help with experience, skills, industries, certifications, or contacting Himanshu. If you have a specific query, feel free to email directly.";
+  return null; // triggers email fallback
 }
 
-/* ===== UI HANDLERS ===== */
+/* ========= UI ELEMENTS ========= */
 const assistantBtn = document.getElementById("assistantButton");
 const assistantPanel = document.getElementById("assistantPanel");
 const sendBtn = document.getElementById("sendBtn");
 const chatInput = document.getElementById("chatInput");
 const chatArea = document.getElementById("chatArea");
 
-assistantBtn.onclick = () => {
-  assistantPanel.classList.toggle("hidden");
-};
-
+assistantBtn.onclick = () => assistantPanel.classList.toggle("hidden");
 sendBtn.onclick = sendMessage;
-chatInput.addEventListener("keypress", e => {
-  if (e.key === "Enter") sendMessage();
-});
+chatInput.addEventListener("keypress", e => e.key === "Enter" && sendMessage());
+
+function quickAsk(type) {
+  appendMessage(type, "user");
+  appendMessage(KB[type].response, "bot");
+}
 
 function sendMessage() {
   const text = chatInput.value.trim();
@@ -557,7 +597,11 @@ function sendMessage() {
 
   setTimeout(() => {
     const reply = getBotResponse(text);
-    appendMessage(reply, "bot");
+    if (reply) {
+      appendMessage(reply, "bot");
+    } else {
+      showEmailFallback(text);
+    }
   }, 400);
 }
 
@@ -565,18 +609,34 @@ function appendMessage(text, sender) {
   const div = document.createElement("div");
   div.className = sender === "user"
     ? "bg-blue-600 text-white p-3 rounded-lg text-right"
-    : "bg-slate-100 p-3 rounded-lg";
+    : "bg-slate-111 p-3 rounded-lg";
   div.textContent = text;
   chatArea.appendChild(div);
   chatArea.scrollTop = chatArea.scrollHeight;
 }
+
+/* ========= EMAIL FALLBACK ========= */
+function showEmailFallback(question) {
+  const div = document.createElement("div");
+  div.className = "bg-yellow-50 border border-yellow-200 p-3 rounded-lg text-sm";
+  div.innerHTML = `
+    I may not have that information yet.<br><br>
+    <form action="https://formsubmit.co/himanshume.gla@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Portfolio Assistant Query">
+      <input type="hidden" name="Question" value="${question}">
+      <textarea name="Message" required class="w-full border rounded p-2 text-sm" placeholder="Add details..."></textarea>
+      <button type="submit" class="mt-2 bg-blue-600 text-white px-3 py-2 rounded text-sm">
+        Send via Email
+      </button>
+    </form>
+  `;
+  chatArea.appendChild(div);
+  chatArea.scrollTop = chatArea.scrollHeight;
+}
 </script>
-
-  
-
-
 </body>
 </html>
+
 
 
 

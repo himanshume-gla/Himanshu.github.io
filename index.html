@@ -69,10 +69,13 @@
       <h3 class="font-bold text-slate-900">HG Nexus</h3>
       <p class="text-xs text-slate-500">Himanshu’s Executive Assistant</p>
     </div>
-    <button id="hg-nexus-close"
-      class="absolute top-3 right-3 text-slate-400 hover:text-red-500">
-      ✕
-    </button>
+  <button
+   id="hg-nexus-close"
+   type="button"
+   aria-label="Minimize HG Nexus"
+  >
+   ✕
+  </button>
 
   </div>
     <!-- HG Nexus Launcher -->
@@ -706,7 +709,7 @@ const panel = document.getElementById('hg-nexus-panel');
 const closeBtn = document.getElementById('hg-nexus-close');
 const launcher = document.getElementById('hg-nexus-launcher');
 
-function showPanel() {
+function openPanel() {
   panel.classList.remove('scale-0', 'opacity-0');
   launcher.classList.add('hidden');
 }
@@ -718,18 +721,22 @@ function minimizePanel() {
 /* =========================
    Events
 ========================= */
-/* Close = Minimize (NOT destroy) */
-closeBtn.addEventListener('click', minimizePanel);
-
-/* Launcher click = Restore */
-launcher.addEventListener('click', showPanel);
+closeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  minimizePanel();
+});
+launcher.addEventListener('click', (e) => {
+  e.preventDefault();
+  openPanel();
+});  
 // Auto open / close on load
 /* Auto behavior */
 window.addEventListener('load', () => {
   if (window.innerWidth >= 768) {
-    showPanel();      // Desktop: open
+    openPanel();
   } else {
-    minimizePanel(); // Mobile: minimized
+    minimizePanel();
   }
 });
 
@@ -858,6 +865,7 @@ function emailFallback(question) {
 </script>
 </body>
 </html>
+
 
 
 

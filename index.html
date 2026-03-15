@@ -2,900 +2,1064 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Himanshu Gupta | RPA & AI Automation Architect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Himanshu Gupta | RPA Architect, AI Automation Architect & Power Platform Specialist</title>
+  <meta
+    name="description"
+    content="Official portfolio of Himanshu Gupta, an RPA Architect and AI Automation Architect with 11+ years of experience in enterprise automation, Power Platform, Blue Prism, ITSM automation, and Generative AI solutions."
+  />
+  <meta
+    name="keywords"
+    content="Himanshu Gupta, RPA Architect, AI Automation Architect, Power Platform Developer, Blue Prism Architect, ITSM Automation, ServiceNow Automation, Power Automate, Power Apps, Generative AI, Automation Consultant"
+  />
+  <meta name="author" content="Himanshu Gupta" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="canonical" href="https://www.example.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Himanshu Gupta | RPA & AI Automation Architect" />
+  <meta
+    property="og:description"
+    content="Explore the portfolio of Himanshu Gupta, specializing in RPA, AI-driven automation, Power Platform, Blue Prism, ServiceNow, and enterprise ITSM solutions."
+  />
+  <meta property="og:url" content="https://www.example.com/" />
+  <meta property="og:image" content="https://www.example.com/assets/images/himanshu-gupta-profile.jpg" />
+  <meta property="og:site_name" content="Himanshu Gupta Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Himanshu Gupta | RPA & AI Automation Architect" />
+  <meta
+    name="twitter:description"
+    content="Portfolio of Himanshu Gupta — enterprise automation specialist in RPA, AI, Power Platform, Blue Prism, and ITSM."
+  />
+  <meta name="twitter:image" content="https://www.example.com/assets/images/himanshu-gupta-profile.jpg" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Himanshu Gupta",
+    "jobTitle": "RPA & AI Automation Architect",
+    "description": "Enterprise automation specialist with 11+ years of experience in RPA, AI-driven automation, Power Platform, Blue Prism, and ITSM solutions.",
+    "email": "mailto:himanshume.gla@gmail.com",
+    "image": "https://www.example.com/assets/images/himanshu-gupta-profile.jpg",
+    "url": "https://www.example.com/",
+    "sameAs": [
+      "https://www.linkedin.com/in/hg1992/"
+    ],
+    "knowsAbout": [
+      "Robotic Process Automation",
+      "Artificial Intelligence",
+      "Generative AI",
+      "Microsoft Power Platform",
+      "Power Automate",
+      "Power Apps",
+      "Blue Prism",
+      "ServiceNow",
+      "BMC Remedy",
+      "ITSM Automation"
+    ]
+  }
+  </script>
 
   <style>
-    .text-slate-400 { color: #475569 !important; } /* slate-600 */
-    .text-slate-300 { color: #334155 !important; } /* slate-700 */
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: #f8fafc; /* slate-50 */
-      color: #0f172a;      /* slate-900 */
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --muted-dark: #334155;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #0891b2;
+      --shadow-sm: 0 11px 30px rgba(15, 23, 42, 0.06);
+      --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
-    .glass {
-      background: #ffffff;
-      border: 1px solid #e5e7eb; /* slate-200 */
-      border-radius: 20px;
-      box-shadow: 0 11px 30px rgba(15, 23, 42, 0.06);
-      transition: all .25s ease;
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
+
+    .glass {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+
     .glass:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(15,23,42,0.08);
+      box-shadow: var(--shadow-lg);
     }
+
     .gradient-text {
-      background: linear-gradient(90deg, #2563eb, #0891b2);
+      background: linear-gradient(90deg, var(--primary), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    /* =========================
-   HG Nexus Animations
-========================= */
-#hg-nexus-panel {
-  transform-origin: bottom right;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
 
-.scale-0 {
-  transform: scale(0);
-}
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
 
-.opacity-0 {
-  opacity: 0;
-  pointer-events: none;
-}
-#hg-nexus-panel.glass:hover {
-  transform: none;
-}
-#hg-nexus-launcher {
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
+    .sr-only-focusable:not(:focus):not(:active) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    #hg-nexus-panel {
+      transform-origin: bottom right;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .scale-0 {
+      transform: scale(0);
+    }
+
+    .opacity-0 {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #hg-nexus-panel.glass:hover {
+      transform: none;
+    }
+
+    #hg-nexus-launcher {
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .progress-bg {
+      background: #cbd5e1;
+    }
+
+    .skill-stars {
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .muted-dark {
+      color: var(--muted-dark);
+    }
   </style>
 </head>
-<!-- HG NEXUS SIDE PANEL -->␊
-<div id="hg-nexus-panel"␊
-  class="fixed bottom-24 right-6 z-50 w-96 max-w-[90vw] glass scale-0 opacity-0 flex flex-col">
 
-  <!-- Header -->
-  <div class="flex items-center justify-between px-6 py-4 border-b">
-    <div>
-      <h3 class="font-bold text-slate-900">HG Nexus</h3>
-      <p class="text-xs text-slate-500">Himanshu’s Executive Assistant</p>
-    </div>
-  <button
-   id="hg-nexus-close"
-   type="button"
-   aria-label="Minimize HG Nexus"
+<body class="px-6 py-12 md:px-12 lg:px-24">
+  <a href="#main-content" class="sr-only-focusable focus:fixed focus:top-4 focus:left-4 focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow">
+    Skip to content
+  </a>
+
+  <!-- HG NEXUS SIDE PANEL -->
+  <aside
+    id="hg-nexus-panel"
+    class="fixed bottom-24 right-6 z-50 w-96 max-w-[90vw] glass scale-0 opacity-0 flex flex-col"
+    aria-label="HG Nexus assistant panel"
   >
-   ✕
-  </button>
-     </div>
-
-  
-  
-  <!-- Content -->
-  <div class="p-5 text-sm text-slate-700 space-y-4 border-b">
-    <p>👋 Hello. I’m <b>HG Nexus</b>.</p>␊
-    <p>I can help with:</p>
-    <ul class="list-disc ml-5 text-slate-600 space-y-1">
-      <li>Experience & skills</li>
-      <li>Industry background</li>
-      <li>Career highlights</li>
-      <li>Contact & availability</li>
-    </ul>
-  </div>
-  <div id="chatArea" class="max-h-72 overflow-y-auto p-4 space-y-3 bg-slate-50"></div>
-   <!-- Input -->
-  <div class="border-t p-4 flex gap-2">
-    <input
-      id="chatInput"
-      type="text"
-      placeholder="Ask about Himanshu’s experience..."
-      class="flex-1 px-4 py-3 text-sm rounded-xl border
-             border-slate-300 focus:outline-none
-             focus:ring-2 focus:ring-blue-500"
-    />
-    <button id="sendBtn" class="px-4 py-3 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700" type="button">
-      Send
-    </button>
-  </div>
-
-</div>
-
-<!-- HG Nexus Launcher -->
-<button
-  id="hg-nexus-launcher"
-  class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-xl"
-  aria-label="Open HG Nexus"
->
-  <i data-lucide="bot"></i>
-</button>
-
-<body class="px-6 md:px-12 lg:px-24 py-12">
-<!-- HERO -->
-<header class="max-w-6xl mx-auto mb-24">
-  <div class="flex flex-col md:flex-row items-center gap-11">
-
-    <!-- Profile Image -->
-    <img 
-      src="assets/images/himanshu-gupta-profile.jpg"
-      alt="Himanshu Gupta"
-      class="w-36 h-36 rounded-2xl object-cover border border-slate-200 shadow"
-    />
-
-    <!-- Text -->
-    <div>
-      <div class="flex items-center gap-3 mb-2">
-        <i data-lucide="bot" class="text-blue-600"></i>
-        <h1 class="text-5xl font-extrabold">
-          Himanshu <span class="gradient-text">Gupta</span>
-        </h1>
-      </div>
-
-      <p class="text-xl text-blue-600 font-semibold mb-4">
-        RPA & AI Automation Architect
-      </p>
-
-      <p class="text-slate-600 text-lg max-w-3xl border-l-4 border-blue-500 pl-5 italic">
-        Designing enterprise-grade automation systems that blend RPA, AI, and ITSM to reduce cost, risk, and operational friction.
-      </p>
-
-      <div class="flex gap-4 mt-6">
-        <a href="mailto:himanshume.gla@gmail.com"
-           class="flex items-center gap-2 bg-slate-111 px-5 py-3 rounded-xl hover:text-blue-600">
-          <i data-lucide="mail"></i> Contact
-        </a>
-        <a href="assets/Himanshu Gupta_Resume_Plain.docx"
-           class="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-xl font-bold hover:bg-blue-700">
-          <i data-lucide="download"></i> Resume
-        </a>
-      </div>
-    </div>
-
-  </div>
-</header>
-
-<!-- 🔹 EVERYTHING BELOW IS UNCHANGED CONTENT (ONLY COLORS ADJUSTED) -->
-
-<!-- VALUE PROPOSITION -->
-<section class="max-w-6xl mx-auto mb-24">
-  <div class="glass p-11">
-    <h2 class="uppercase tracking-widest text-blue-600 text-sm font-bold mb-4">
-      What I Do
-    </h2>
-    <p class="text-lg leading-relaxed text-slate-700">
-      I architect and deliver large-scale RPA and AI-driven automation solutions for banking,
-      telecom, and enterprise IT environments. With 11+ years across Cognizant, HCL, and Wipro,
-      I specialize in translating complex business workflows into secure, scalable,
-      and production-ready automation ecosystems using Microsoft Power Platform,
-      Blue Prism, and Generative AI.
-    </p>
-  </div>
-</section>
-
-<!-- 🔹 LINKEDIN ARTICLES -->
-<section class="max-w-6xl mx-auto mb-24">
-  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
-    <i data-lucide="file-text" class="text-blue-600"></i>
-    Thought Leadership & Articles
-  </h2>
-
-  <div class="grid md:grid-cols-3 gap-6">
-
-    <a href="https://www.linkedin.com/posts/hg1992_ai-artificialintelligence-agi-activity-7291788026601517056-1VIn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I" target="_blank" class="glass p-6" target="_blank" class="glass p-6 hover:border-blue-500">
-      <h3 class="font-bold mb-2">
-        The AI Revolution: From Narrow Automation to Superintelligence and Human-Centered AI
-      </h3>
-      <p class="text-sm text-slate-600">
-        This article explores the AI Continuum, from Traditional AI to AGI, ASI, and Anthropic Computing, highlighting key differences, real-world use cases, and the challenges ahead.
-      </p>
-      <span class="text-blue-600 text-sm font-semibold mt-3 inline-block">
-        Read on LinkedIn →
-      </span>
-    </a>
-
-    <a href="https://www.linkedin.com/posts/hg1992_artificialintelligence-agenticai-rpa-activity-7280905448172437504-XXWB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I" target="_blank" class="glass p-6" target="_blank" class="glass p-6 hover:border-blue-500">
-      <h3 class="font-bold mb-2">
-        Agentic AI: How It Works, Its Implementation, and How It Differs from RPA
-      </h3>
-      <p class="text-sm text-slate-600">
-       This article explores about Agentic AI and differentiation with RPA.
-      </p>
-      <span class="text-blue-600 text-sm font-semibold mt-3 inline-block">
-        Read on LinkedIn →
-      </span>
-    </a>
-
-    <a href="https://www.linkedin.com/posts/hg1992_itsm-rpa-ai-activity-7282762744114153088-PZum?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I" target="_blank" class="glass p-6" target="_blank" class="glass p-6 hover:border-blue-500">
-      <h3 class="font-bold mb-2">
-        Enhancing IT Service Management Through the Synergistic Application of Robotic Process Automation and Artificial Intelligence
-      </h3>
-      <p class="text-sm text-slate-600">
-        This article explores how the strategic integration of RPA and AI can revolutionize ITSM, driving efficiency, reducing costs, and enhancing service delivery..
-      </p>
-      <span class="text-blue-600 text-sm font-semibold mt-3 inline-block">
-        Read on LinkedIn →
-      </span>
-    </a>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="max-w-6xl mx-auto mb-24">
-  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
-    <i data-lucide="layers"></i> Services & Capabilities
-  </h2>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-    <div class="glass p-6">
-      <h3 class="font-bold text-blue-400 mb-3">RPA Architecture</h3>
-      <p class="text-sm text-slate-400">
-        Enterprise RPA design, governance models, reusable frameworks, security & compliance.
-      </p>
-    </div>
-
-    <div class="glass p-6">
-      <h3 class="font-bold text-teal-400 mb-3">AI-Driven Automation</h3>
-      <p class="text-sm text-slate-400">
-        GenAI-based test case generation, NLP workflows, AI Builder, intelligent decisioning.
-      </p>
-    </div>
-
-    <div class="glass p-6">
-      <h3 class="font-bold text-purple-400 mb-3">ITSM Automation</h3>
-      <p class="text-sm text-slate-400">
-        ServiceNow & Remedy automation across Incident, Change, CMDB, onboarding and audits.
-      </p>
-    </div>
-
-    <div class="glass p-6">
-      <h3 class="font-bold text-yellow-400 mb-3">Consulting & PoCs</h3>
-      <p class="text-sm text-slate-400">
-        Automation discovery, ROI assessment, PoC → Production execution.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- Skills -->
-<section class="max-w-6xl mx-auto mb-24">
-  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
-    <i data-lucide="activity" class="text-blue-400"></i>
-    Architect Skill Matrix
-  </h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <!-- TECHNICAL -->
-    <div class="glass p-6">
-      <h3 class="text-blue-400 font-bold mb-6 flex items-center gap-2">
-        <i data-lucide="cpu"></i> Technical Expertise
-      </h3>
-
-      <div class="space-y-4">
-        <div class="flex justify-between">
-          <span>RPA (Blue Prism, PAD)</span>
-          <div class="flex gap-1">
-            ★★★★★
-          </div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Microsoft Power Platform</span>
-          <div class="flex gap-1">★★★★★</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>AI / GenAI / NLP</span>
-          <div class="flex gap-1">★★★★☆</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>ITSM (SNOW, Remedy)</span>
-          <div class="flex gap-1">★★★★★</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Solution Architecture</span>
-          <div class="flex gap-1">★★★★★</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MANAGERIAL -->
-    <div class="glass p-6">
-      <h3 class="text-teal-400 font-bold mb-6 flex items-center gap-2">
-        <i data-lucide="users"></i> Managerial Strength
-      </h3>
-
-      <div class="space-y-4">
-        <div class="flex justify-between">
-          <span>Team Leadership</span>
-          <div>★★★★★</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Stakeholder Management</span>
-          <div>★★★★★</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Project Delivery</span>
-          <div>★★★★☆</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Agile / JIRA</span>
-          <div>★★★★☆</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Governance & Compliance</span>
-          <div>★★★★☆</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SOFT / CONSULTING -->
-    <div class="glass p-6">
-      <h3 class="text-purple-400 font-bold mb-6 flex items-center gap-2">
-        <i data-lucide="message-circle"></i> Consulting & Soft Skills
-      </h3>
-
-      <div class="space-y-4">
-        <div class="flex justify-between">
-          <span>Client Communication</span>
-          <div>★★★★★</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Requirement Discovery</span>
-          <div>★★★★★</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Business Translation</span>
-          <div>★★★★★</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Presentation & Proposals</span>
-          <div>★★★★☆</div>
-        </div>
-
-        <div class="flex justify-between">
-          <span>Mentoring</span>
-          <div>★★★★☆</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-<section class="max-w-5xl mx-auto mb-24">
-  <div class="glass p-8">
-    <h3 class="text-xl font-bold mb-6">
-      Capability Balance
-    </h3>
-
-    <div class="space-y-5">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200">
       <div>
-        <div class="flex justify-between mb-1">
-          <span>Technical Depth</span><span>95%</span>
-        </div>
-        <div class="w-full bg-slate-700 rounded-full h-2">
-          <div class="bg-blue-500 h-2 rounded-full w-[95%]"></div>
-        </div>
+        <h2 class="font-bold text-slate-900 text-lg">HG Nexus</h2>
+        <p class="text-xs text-slate-500">Himanshu’s Executive Assistant</p>
       </div>
-
-      <div>
-        <div class="flex justify-between mb-1">
-          <span>Managerial Leadership</span><span>90%</span>
-        </div>
-        <div class="w-full bg-slate-700 rounded-full h-2">
-          <div class="bg-teal-400 h-2 rounded-full w-[90%]"></div>
-        </div>
-      </div>
-
-      <div>
-        <div class="flex justify-between mb-1">
-          <span>Consulting & Communication</span><span>92%</span>
-        </div>
-        <div class="w-full bg-slate-700 rounded-full h-2">
-          <div class="bg-purple-400 h-2 rounded-full w-[92%]"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <section class="max-w-6xl mx-auto mb-24">
-  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
-    <i data-lucide="award" class="text-blue-600"></i>
-    Professional Certifications
-  </h2>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-    <!-- Microsoft -->
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/PL 400.png" alt="Microsoft Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Microsoft Certified Power Platform Developer Associate (PL-400)</b><br/>
-        Microsoft
-      </p>
-    </div>
-
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/PL 500.png" alt="Microsoft Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Microsoft Certified Power Automate RPA Developer Associate (PL-500)</b><br/>
-        Microsoft
-      </p>
-    </div>
-    
-    <!-- Oracle -->
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/oracle gen AI.png" alt="Oracle Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</b><br/>
-        Oracle
-      </p>
-    </div>
-        <!--Azure AI -->
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/Azure AI engineer.png" alt="Oracle Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Microsoft Azure AI Engineer Associate</b><br/>
-        Oracle
-      </p>
-    </div>
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/PL 300.png" alt="Microsoft Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Microsoft Certified Power BI Data Analyst Associate (PL-300)</b><br/>
-        Microsoft
-      </p>
-    </div>
-
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/az 900.png" alt="Azure Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Microsoft Certified Azure Fundamentals</b><br/>
-        Microsoft Azure
-      </p>
-    </div>
-    
-    <!-- Blue Prism -->
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/ASD01.png" alt="Blue Prism Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Blue Prism Solution Designer (ASD-01)</b><br/>
-        SS&C Blue Prism
-      </p>
-    </div>
-
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/AD 01.png" alt="Blue Prism Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>Blue Prism Certified Developer (AD-01)</b><br/>
-        SS&C Blue Prism
-      </p>
-    </div>
-
-    <!-- ITSM -->
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/CSD01.png" alt="ServiceNow Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>ServiceNow Certified System Administrator</b><br/>
-        ServiceNow
-      </p>
-    </div>
-
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/bmc.png" alt="BMC Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>BMC Certified Professional – Service Desk & Change Management 9.x</b><br/>
-        BMC Software
-      </p>
-    </div>
-
-    <div class="glass p-5 flex items-start gap-4">
-      <img src="assets/images/bmc.png" alt="BMC Certification" class="w-10 h-10">
-      <p class="text-sm">
-        <b>BMC Accredited CMDB Manager</b><br/>
-        BMC Software
-      </p>
-    </div>
-
-  </div>
-</section>
-<section class="max-w-6xl mx-auto mb-24">
-  <div class="glass p-8">
-    <h2 class="text-xl font-bold mb-8 flex items-center gap-3">
-      <i data-lucide="eye" class="text-blue-400"></i>
-      Recruiter Snapshot
-    </h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-
-      <div>
-        <p class="text-4xl font-extrabold gradient-text">11+</p>
-        <p class="text-sm text-slate-400 mt-1">Years Experience</p>
-      </div>
-
-      <div>
-        <p class="text-4xl font-extrabold gradient-text">25+</p>
-        <p class="text-sm text-slate-400 mt-1">Automation Use Cases</p>
-      </div>
-
-      <div>
-        <p class="text-4xl font-extrabold gradient-text">90%</p>
-        <p class="text-sm text-slate-400 mt-1">Process Efficiency Gain</p>
-      </div>
-
-      <div>
-        <p class="text-4xl font-extrabold gradient-text">3</p>
-        <p class="text-sm text-slate-400 mt-1">Industries Served</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <section class="max-w-6xl mx-auto mb-24">
-  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
-    <i data-lucide="building-2" class="text-blue-400"></i>
-    Industry Experience
-  </h2>
-
-  <div class="grid md:grid-cols-3 gap-8">
-
-    <!-- Banking & BFSI -->
-    <div class="glass p-6">
-      <h3 class="text-blue-400 font-bold mb-3">Banking & BFSI</h3>
-      <p class="text-sm text-slate-400 mb-4">
-        Enterprise automation for regulated banking environments.
-      </p>
-      <ul class="text-sm space-y-2 text-slate-300">
-        <li>• KYC, loan recovery & collections</li>
-        <li>• 90% efficiency improvement</li>
-        <li>• Power Platform & Blue Prism</li>
-        <li>• Compliance-first architecture</li>
-      </ul>
-    </div>
-
-    <!-- Telecom -->
-    <div class="glass p-6">
-      <h3 class="text-teal-400 font-bold mb-3">Telecom</h3>
-      <p class="text-sm text-slate-400 mb-4">
-        High-volume IT service desk and operations automation.
-      </p>
-      <ul class="text-sm space-y-2 text-slate-300">
-        <li>• 60% reduction in manual effort</li>
-        <li>• Service desk automation</li>
-        <li>• Incident & ticket orchestration</li>
-        <li>• Scalable ITSM workflows</li>
-      </ul>
-    </div>
-
-    <!-- Enterprise IT / ITSM -->
-    <div class="glass p-6">
-      <h3 class="text-purple-400 font-bold mb-3">Enterprise IT / ITSM</h3>
-      <p class="text-sm text-slate-400 mb-4">
-        Platform-centric automation across global enterprises.
-      </p>
-      <ul class="text-sm space-y-2 text-slate-300">
-        <li>• ServiceNow & BMC Remedy</li>
-        <li>• CMDB, Incident & Change</li>
-        <li>• Multi-tenant environments</li>
-        <li>• 25+ automation opportunities</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- CAREER SNAPSHOT -->
-<section class="max-w-6xl mx-auto mb-24">
-  <h2 class="text-2xl font-bold mb-12 flex items-center gap-3">
-    <i data-lucide="briefcase"></i> Career Highlights
-  </h2>
-
-  <div class="space-y-6">
-    <div class="glass p-6">
-      <h3 class="font-bold text-lg">Manager – Cognizant</h3>
-      <p class="text-sm text-slate-400">
-        Led banking RPA programs automating KYC, loan recovery and collections.
-        Delivered up to <b>90% efficiency improvement</b>.
-        Built GenAI PoC reducing test case creation effort by <b>80%</b>.
-      </p>
-    </div>
-
-    <div class="glass p-6">
-      <h3 class="font-bold text-lg">Consultant – HCL Technologies</h3>
-      <p class="text-sm text-slate-400">
-        Delivered 15+ ITSM automations, reduced manual effort by 60%,
-        uncovered 25+ automation opportunities via SNOW analytics.
-      </p>
-    </div>
-
-    <div class="glass p-6">
-      <h3 class="font-bold text-lg">Senior Engineer – HCL Comnet</h3>
-      <p class="text-sm text-slate-400">
-        Multi-tenant ITSM automation, audit tooling, and platform customization
-        across 111+ enterprise clients.
-      </p>
-    </div>
-  
-  <div class="glass p-6">
-  <h3 class="font-bold text-lg">Project Engineer – Wipro Technology</h3>
-  <p class="text-sm text-slate-400">
-    BMC Remedy Developer and L1 Team Lead supporting BFSI and telecom clients.
-    Led CMDB and ITSM customizations, handled customer escalations, and identified
-    automation opportunities that reduced errors by <b>95%</b> and FTE effort by <b>40%</b>.
-  </p>
-</div>
-</section>
-
-<!-- RECOMMENDATIONS -->
-<section class="max-w-6xl mx-auto mb-24">
-  <h2 class="text-2xl font-bold mb-10 flex items-center gap-3">
-    <i data-lucide="quote" class="text-blue-600"></i>
-    What People Say
-  </h2>
-
-  <div class="relative overflow-hidden">
-    <div id="testimonial-track" class="flex transition-transform duration-700">
-
-      <!-- Slide 1 -->
-      <div class="min-w-full px-6">
-        <div class="glass p-8">
-          <p class="italic text-slate-700 mb-6">
-            “Himanshu is a good team player. Possesses strong development skills, is well spoken,
-            and demonstrates excellent communication ability.”
-          </p>
-          <div>
-            <p class="font-bold">Vineet Jain</p>
-            <p class="text-sm text-slate-500">
-              General Manager – Infrastructure Services (On-Prem & Cloud)
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="min-w-full px-6">
-        <div class="glass p-8">
-          <p class="italic text-slate-700 mb-6">
-            “Himanshu is one of the most dependable professionals I’ve worked with.
-            He demonstrates excellent team leadership and strong commitment to delivery.”
-          </p>
-          <div>
-            <p class="font-bold">Vinay Bhavsar, PMP</p>
-            <p class="text-sm text-slate-500">
-              Business Problem Solver & IT Service Delivery Manager
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="min-w-full px-6">
-        <div class="glass p-8">
-          <p class="italic text-slate-700 mb-6">
-            “Himanshu is extraordinarily resourceful, passionate, and reliable.
-            He consistently delivers quality outcomes within tight timelines.”
-          </p>
-          <div>
-            <p class="font-bold">Gulshan Lal Gupta</p>
-            <p class="text-sm text-slate-500">
-              Enterprise Architect
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<script>
-/* =========================
-   LUCIDE ICONS
-========================= */
-if (window.lucide) {
-  lucide.createIcons();
-}
-
-/* =========================
-   HG NEXUS PANEL LOGIC
-========================= */
-const panel = document.getElementById('hg-nexus-panel');
-const closeBtn = document.getElementById('hg-nexus-close');
-const launcher = document.getElementById('hg-nexus-launcher');
-
-function openPanel() {
-  panel.classList.remove('scale-0', 'opacity-0');
-  launcher.classList.add('hidden');
-}
-
-function minimizePanel() {
-  panel.classList.add('scale-0', 'opacity-0');
-  launcher.classList.remove('hidden');
-}
-/* =========================
-   Events
-========================= */
-closeBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  minimizePanel();
-});
-launcher.addEventListener('click', (e) => {
-  e.preventDefault();
-  openPanel();
-});  
-// Auto open / close on load
-/* Auto behavior */
-window.addEventListener('load', () => {
-  if (window.innerWidth >= 768) {
-    openPanel();
-  } else {
-    minimizePanel();
-  }
-});
-
-
-/* =========================
-   TESTIMONIAL SLIDER
-========================= */
-const track = document.getElementById("testimonial-track");
-let index = 0;
-
-if (track && track.children.length > 1) {
-  setInterval(() => {
-    index = (index + 1) % track.children.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }, 5000);
-}
-
-/* =========================
-   HG NEXUS KNOWLEDGE BASE
-========================= */
-const KB = {
-  experience: {
-    keywords: ["experience", "career", "background", "years"],
-    response:
-      "Himanshu has 10+ years of experience delivering RPA, AI-driven automation, and ITSM solutions across Cognizant, HCL, and Wipro."
-  },
-  skills: {
-    keywords: ["skills", "technology", "tools", "stack"],
-    response:
-      "Core skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, ServiceNow, and BMC Remedy."
-  },
-  industries: {
-    keywords: ["industry", "domain", "banking", "telecom"],
-    response:
-      "Industry experience spans Banking & BFSI, Telecom, and Enterprise IT / ITSM environments."
-  },
-  certifications: {
-    keywords: ["certification", "certified"],
-    response:
-      "Certified in Microsoft Power Platform (PL-400, PL-500), Blue Prism, Oracle GenAI, Azure Fundamentals, ServiceNow, and BMC."
-  },
-  contact: {
-    keywords: ["contact", "email", "reach"],
-    response:
-      "You can contact Himanshu at himanshume.gla@gmail.com or use the Contact button on this page."
-  },
-  resume: {
-    keywords: ["resume", "cv", "download"],
-    response:
-      "You can download the resume using the Resume button in the hero section."
-  }
-};
-
-/* =========================
-   CHAT HANDLERS
-========================= */
-const chatArea = document.getElementById("chatArea");
-const chatInput = document.getElementById("chatInput");
-const sendBtn = document.getElementById("sendBtn");
-
-sendBtn?.addEventListener("click", sendMessage);
-chatInput?.addEventListener("keypress", e => {
-  if (e.key === "Enter") sendMessage();
-});
-
-function sendMessage() {
-  const text = chatInput.value.trim();
-  if (!text) return;
-
-  appendMessage(text, "user");
-  chatInput.value = "";
-
-  setTimeout(() => {
-    const reply = matchResponse(text);
-    reply ? appendMessage(reply, "bot") : emailFallback(text);
-  }, 300);
-}
-
-function matchResponse(msg) {
-  const text = msg.toLowerCase();
-  for (const key in KB) {
-    if (KB[key].keywords.some(k => text.includes(k))) {
-      return KB[key].response;
-    }
-  }
-  return null;
-}
-
-function appendMessage(text, sender) {
-  const div = document.createElement("div");
-  div.className =
-    sender === "user"
-      ? "bg-blue-600 text-white p-3 rounded-lg text-right"
-      : "bg-slate-100 p-3 rounded-lg";
-
-  div.textContent = text;
-  chatArea.appendChild(div);
-  chatArea.scrollTop = chatArea.scrollHeight;
-}
-
-/* =========================
-   EMAIL ESCALATION
-========================= */
-function emailFallback(question) {
-  const div = document.createElement("div");
-  div.className =
-    "bg-yellow-50 border border-yellow-200 p-3 rounded-lg text-sm";
-
-  div.innerHTML = `
-    I may not have that information yet.<br><br>
-    <form action="https://formsubmit.co/himanshume.gla@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="HG Nexus – Portfolio Query">
-      <input type="hidden" name="Question" value="${question}">
-      <textarea name="Message" required
-        class="w-full border rounded p-2 text-sm"
-        placeholder="Add more details..."></textarea>
-      <button type="submit"
-        class="mt-2 bg-blue-600 text-white px-3 py-2 rounded">
-        Send via Email
+      <button
+        id="hg-nexus-close"
+        type="button"
+        aria-label="Minimize HG Nexus"
+        class="text-slate-600 hover:text-slate-900 text-lg"
+      >
+        ✕
       </button>
-    </form>
-  `;
-  chatArea.appendChild(div);
-  chatArea.scrollTop = chatArea.scrollHeight;
-}
-</script>
+    </div>
+
+    <div class="p-5 text-sm text-slate-700 space-y-4 border-b border-slate-200">
+      <p>👋 Hello. I’m <strong>HG Nexus</strong>.</p>
+      <p>I can help with:</p>
+      <ul class="list-disc ml-5 text-slate-600 space-y-1">
+        <li>Experience and skills</li>
+        <li>Industry background</li>
+        <li>Career highlights</li>
+        <li>Contact and availability</li>
+      </ul>
+    </div>
+
+    <div
+      id="chatArea"
+      class="max-h-72 overflow-y-auto p-4 space-y-3 bg-slate-50"
+      aria-live="polite"
+      aria-label="Chat messages"
+    ></div>
+
+    <div class="border-t border-slate-200 p-4 flex gap-2">
+      <label for="chatInput" class="sr-only">Ask about Himanshu’s experience</label>
+      <input
+        id="chatInput"
+        type="text"
+        placeholder="Ask about Himanshu’s experience..."
+        class="flex-1 px-4 py-3 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <button
+        id="sendBtn"
+        class="px-4 py-3 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700"
+        type="button"
+      >
+        Send
+      </button>
+    </div>
+  </aside>
+
+  <!-- HG Nexus Launcher -->
+  <button
+    id="hg-nexus-launcher"
+    class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-xl"
+    aria-label="Open HG Nexus"
+    type="button"
+  >
+    <i data-lucide="bot"></i>
+  </button>
+
+  <!-- Header / Hero -->
+  <header class="max-w-6xl mx-auto mb-24" role="banner">
+    <nav class="flex justify-between items-center mb-10" aria-label="Primary">
+      <a href="#" class="font-extrabold text-xl tracking-tight text-slate-900">
+        Himanshu Gupta
+      </a>
+      <div class="hidden md:flex gap-6 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#certifications" class="hover:text-blue-600">Certifications</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+    </nav>
+
+    <div class="flex flex-col md:flex-row items-center gap-11">
+      <img
+        src="assets/images/himanshu-gupta-profile.jpg"
+        alt="Portrait of Himanshu Gupta, RPA and AI Automation Architect"
+        class="w-36 h-36 rounded-2xl object-cover border border-slate-200 shadow"
+        loading="eager"
+        width="144"
+        height="144"
+      />
+
+      <div>
+        <div class="flex items-center gap-3 mb-2">
+          <i data-lucide="bot" class="text-blue-600" aria-hidden="true"></i>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            Himanshu <span class="gradient-text">Gupta</span>
+          </h1>
+        </div>
+
+        <p class="text-xl text-blue-600 font-semibold mb-4">
+          RPA Architect, AI Automation Architect & Power Platform Specialist
+        </p>
+
+        <p class="muted text-lg max-w-3xl border-l-4 border-blue-500 pl-5 italic">
+          Designing enterprise-grade automation systems that blend RPA, AI, Generative AI, and ITSM to reduce cost, risk, and operational friction.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-6" id="contact">
+          <a
+            href="mailto:himanshume.gla@gmail.com"
+            class="flex items-center gap-2 bg-white border border-slate-200 px-5 py-3 rounded-xl hover:text-blue-600"
+            aria-label="Email Himanshu Gupta"
+          >
+            <i data-lucide="mail" aria-hidden="true"></i> Contact
+          </a>
+
+          <a
+            href="assets/Himanshu_Gupta_Resume_Plain.docx"
+            class="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-xl font-bold hover:bg-blue-700"
+            aria-label="Download Himanshu Gupta resume"
+          >
+            <i data-lucide="download" aria-hidden="true"></i> Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- About -->
+    <section id="about" class="max-w-6xl mx-auto mb-24" aria-labelledby="about-title">
+      <div class="glass p-11">
+        <h2 id="about-title" class="uppercase tracking-widest text-blue-600 text-sm font-bold mb-4">
+          What I Do
+        </h2>
+        <p class="text-lg leading-relaxed text-slate-700">
+          I architect and deliver large-scale RPA and AI-driven automation solutions for banking, telecom, and enterprise IT environments. With 11+ years across Cognizant, HCL, and Wipro, I specialize in translating complex business workflows into secure, scalable, and production-ready automation ecosystems using Microsoft Power Platform, Blue Prism, ServiceNow, BMC Remedy, and Generative AI.
+        </p>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="max-w-6xl mx-auto mb-24" aria-labelledby="articles-title">
+      <h2 id="articles-title" class="section-title">
+        <i data-lucide="file-text" class="text-blue-600" aria-hidden="true"></i>
+        Thought Leadership & Articles
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="glass p-6 hover:border-blue-500">
+          <h3 class="font-bold mb-2">
+            <a
+              href="https://www.linkedin.com/posts/hg1992_ai-artificialintelligence-agi-activity-7291788026601517056-1VIn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-blue-600"
+            >
+              The AI Revolution: From Narrow Automation to Superintelligence and Human-Centered AI
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600">
+            An exploration of the AI continuum, from traditional AI to AGI, ASI, and human-centered intelligence models, including practical applications and strategic implications.
+          </p>
+          <span class="text-blue-600 text-sm font-semibold mt-3 inline-block">
+            Read on LinkedIn →
+          </span>
+        </article>
+
+        <article class="glass p-6 hover:border-blue-500">
+          <h3 class="font-bold mb-2">
+            <a
+              href="https://www.linkedin.com/posts/hg1992_artificialintelligence-agenticai-rpa-activity-7280905448172437504-XXWB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-blue-600"
+            >
+              Agentic AI: How It Works, Its Implementation, and How It Differs from RPA
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600">
+            A practical take on Agentic AI, how it works, implementation patterns, and how it differs from traditional RPA-led automation.
+          </p>
+          <span class="text-blue-600 text-sm font-semibold mt-3 inline-block">
+            Read on LinkedIn →
+          </span>
+        </article>
+
+        <article class="glass p-6 hover:border-blue-500">
+          <h3 class="font-bold mb-2">
+            <a
+              href="https://www.linkedin.com/posts/hg1992_itsm-rpa-ai-activity-7282762744114153088-PZum?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA0HALoBVJKJSKrHeEk7_f_N2i74ovXnv5I"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-blue-600"
+            >
+              Enhancing IT Service Management Through the Synergistic Application of Robotic Process Automation and Artificial Intelligence
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600">
+            A deep dive into how RPA and AI can transform ITSM by improving service efficiency, reducing cost, and enhancing enterprise support operations.
+          </p>
+          <span class="text-blue-600 text-sm font-semibold mt-3 inline-block">
+            Read on LinkedIn →
+          </span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="max-w-6xl mx-auto mb-24" aria-labelledby="services-title">
+      <h2 id="services-title" class="section-title">
+        <i data-lucide="layers" aria-hidden="true"></i>
+        Services & Capabilities
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <article class="glass p-6">
+          <h3 class="font-bold text-blue-600 mb-3">RPA Architecture</h3>
+          <p class="text-sm muted">
+            Enterprise RPA design, governance models, reusable frameworks, security, compliance, and scalable automation operating models.
+          </p>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="font-bold text-cyan-600 mb-3">AI-Driven Automation</h3>
+          <p class="text-sm muted">
+            Generative AI use cases, test case generation, NLP workflows, AI Builder, intelligent automation, and AI-assisted process decisions.
+          </p>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="font-bold text-violet-600 mb-3">ITSM Automation</h3>
+          <p class="text-sm muted">
+            ServiceNow and Remedy automation across Incident, Change, CMDB, onboarding, service desk workflows, and audit operations.
+          </p>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="font-bold text-amber-600 mb-3">Consulting & PoCs</h3>
+          <p class="text-sm muted">
+            Automation discovery, ROI analysis, solution consulting, and end-to-end execution from proof of concept to production rollout.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="max-w-6xl mx-auto mb-24" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">
+        <i data-lucide="activity" class="text-blue-600" aria-hidden="true"></i>
+        Architect Skill Matrix
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="glass p-6">
+          <h3 class="text-blue-600 font-bold mb-6 flex items-center gap-2">
+            <i data-lucide="cpu" aria-hidden="true"></i> Technical Expertise
+          </h3>
+
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span>RPA (Blue Prism, Power Automate Desktop)</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Microsoft Power Platform</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>AI / GenAI / NLP</span>
+              <div class="skill-stars" aria-label="4 out of 5">★★★★☆</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>ITSM (ServiceNow, Remedy)</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Solution Architecture</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="text-cyan-600 font-bold mb-6 flex items-center gap-2">
+            <i data-lucide="users" aria-hidden="true"></i> Managerial Strength
+          </h3>
+
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span>Team Leadership</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Stakeholder Management</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Project Delivery</span>
+              <div class="skill-stars" aria-label="4 out of 5">★★★★☆</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Agile / JIRA</span>
+              <div class="skill-stars" aria-label="4 out of 5">★★★★☆</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Governance & Compliance</span>
+              <div class="skill-stars" aria-label="4 out of 5">★★★★☆</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="text-violet-600 font-bold mb-6 flex items-center gap-2">
+            <i data-lucide="message-circle" aria-hidden="true"></i> Consulting & Soft Skills
+          </h3>
+
+          <div class="space-y-4">
+            <div class="flex justify-between">
+              <span>Client Communication</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Requirement Discovery</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Business Translation</span>
+              <div class="skill-stars" aria-label="5 out of 5">★★★★★</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Presentation & Proposals</span>
+              <div class="skill-stars" aria-label="4 out of 5">★★★★☆</div>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Mentoring</span>
+              <div class="skill-stars" aria-label="4 out of 5">★★★★☆</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Capability Balance -->
+    <section class="max-w-5xl mx-auto mb-24" aria-labelledby="capability-title">
+      <div class="glass p-8">
+        <h2 id="capability-title" class="text-xl font-bold mb-6">
+          Capability Balance
+        </h2>
+
+        <div class="space-y-5">
+          <div>
+            <div class="flex justify-between mb-1">
+              <span>Technical Depth</span><span>95%</span>
+            </div>
+            <div class="w-full progress-bg rounded-full h-2" aria-hidden="true">
+              <div class="bg-blue-500 h-2 rounded-full w-[95%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span>Managerial Leadership</span><span>90%</span>
+            </div>
+            <div class="w-full progress-bg rounded-full h-2" aria-hidden="true">
+              <div class="bg-cyan-500 h-2 rounded-full w-[90%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1">
+              <span>Consulting & Communication</span><span>92%</span>
+            </div>
+            <div class="w-full progress-bg rounded-full h-2" aria-hidden="true">
+              <div class="bg-violet-500 h-2 rounded-full w-[92%]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="max-w-6xl mx-auto mb-24" aria-labelledby="certifications-title">
+      <h2 id="certifications-title" class="section-title">
+        <i data-lucide="award" class="text-blue-600" aria-hidden="true"></i>
+        Professional Certifications
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/PL 400.png" alt="PL-400 certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Microsoft Certified Power Platform Developer Associate (PL-400)</strong><br />
+            Microsoft
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/PL 500.png" alt="PL-500 certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Microsoft Certified Power Automate RPA Developer Associate (PL-500)</strong><br />
+            Microsoft
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/oracle gen AI.png" alt="Oracle Generative AI certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Oracle Cloud Infrastructure 2024 Generative AI Certified Professional</strong><br />
+            Oracle
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/Azure AI engineer.png" alt="Azure AI Engineer certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Microsoft Azure AI Engineer Associate</strong><br />
+            Microsoft
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/PL 300.png" alt="PL-300 certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Microsoft Certified Power BI Data Analyst Associate (PL-300)</strong><br />
+            Microsoft
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/az 900.png" alt="AZ-900 certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Microsoft Certified Azure Fundamentals</strong><br />
+            Microsoft Azure
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/ASD01.png" alt="Blue Prism Solution Designer certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Blue Prism Solution Designer (ASD-01)</strong><br />
+            SS&amp;C Blue Prism
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/AD 01.png" alt="Blue Prism Developer certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>Blue Prism Certified Developer (AD-01)</strong><br />
+            SS&amp;C Blue Prism
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/CSD01.png" alt="ServiceNow certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>ServiceNow Certified System Administrator</strong><br />
+            ServiceNow
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/bmc.png" alt="BMC certification badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>BMC Certified Professional – Service Desk & Change Management 9.x</strong><br />
+            BMC Software
+          </p>
+        </article>
+
+        <article class="glass p-5 flex items-start gap-4">
+          <img src="assets/images/bmc.png" alt="BMC CMDB Manager badge" class="w-10 h-10" loading="lazy" width="40" height="40" />
+          <p class="text-sm">
+            <strong>BMC Accredited CMDB Manager</strong><br />
+            BMC Software
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Snapshot -->
+    <section class="max-w-6xl mx-auto mb-24" aria-labelledby="snapshot-title">
+      <div class="glass p-8">
+        <h2 id="snapshot-title" class="text-xl font-bold mb-8 flex items-center gap-3">
+          <i data-lucide="eye" class="text-blue-600" aria-hidden="true"></i>
+          Recruiter Snapshot
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <p class="text-4xl font-extrabold gradient-text">11+</p>
+            <p class="text-sm muted mt-1">Years Experience</p>
+          </div>
+
+          <div>
+            <p class="text-4xl font-extrabold gradient-text">25+</p>
+            <p class="text-sm muted mt-1">Automation Use Cases</p>
+          </div>
+
+          <div>
+            <p class="text-4xl font-extrabold gradient-text">90%</p>
+            <p class="text-sm muted mt-1">Process Efficiency Gain</p>
+          </div>
+
+          <div>
+            <p class="text-4xl font-extrabold gradient-text">3</p>
+            <p class="text-sm muted mt-1">Industries Served</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Experience -->
+    <section class="max-w-6xl mx-auto mb-24" aria-labelledby="industry-title">
+      <h2 id="industry-title" class="section-title">
+        <i data-lucide="building-2" class="text-blue-600" aria-hidden="true"></i>
+        Industry Experience
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <article class="glass p-6">
+          <h3 class="text-blue-600 font-bold mb-3">Banking & BFSI</h3>
+          <p class="text-sm muted mb-4">
+            Enterprise automation for regulated banking environments.
+          </p>
+          <ul class="text-sm space-y-2 muted-dark">
+            <li>• KYC, loan recovery and collections automation</li>
+            <li>• Up to 90% efficiency improvement</li>
+            <li>• Power Platform and Blue Prism implementation</li>
+            <li>• Compliance-first solution architecture</li>
+          </ul>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="text-cyan-600 font-bold mb-3">Telecom</h3>
+          <p class="text-sm muted mb-4">
+            High-volume IT service desk and operations automation.
+          </p>
+          <ul class="text-sm space-y-2 muted-dark">
+            <li>• 60% reduction in manual effort</li>
+            <li>• Service desk automation</li>
+            <li>• Incident and ticket orchestration</li>
+            <li>• Scalable ITSM workflows</li>
+          </ul>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="text-violet-600 font-bold mb-3">Enterprise IT / ITSM</h3>
+          <p class="text-sm muted mb-4">
+            Platform-centric automation across global enterprises.
+          </p>
+          <ul class="text-sm space-y-2 muted-dark">
+            <li>• ServiceNow and BMC Remedy expertise</li>
+            <li>• CMDB, Incident and Change workflows</li>
+            <li>• Multi-tenant enterprise environments</li>
+            <li>• 25+ automation opportunities identified</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Career Highlights -->
+    <section id="experience" class="max-w-6xl mx-auto mb-24" aria-labelledby="career-title">
+      <h2 id="career-title" class="section-title">
+        <i data-lucide="briefcase" aria-hidden="true"></i>
+        Career Highlights
+      </h2>
+
+      <div class="space-y-6">
+        <article class="glass p-6">
+          <h3 class="font-bold text-lg">Manager – Cognizant</h3>
+          <p class="text-sm muted">
+            Led banking RPA programs automating KYC, loan recovery, and collections. Delivered up to <strong>90% efficiency improvement</strong>. Built a Generative AI proof of concept reducing test case creation effort by <strong>80%</strong>.
+          </p>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="font-bold text-lg">Consultant – HCL Technologies</h3>
+          <p class="text-sm muted">
+            Delivered 15+ ITSM automations, reduced manual effort by 60%, and uncovered 25+ automation opportunities through ServiceNow analytics and workflow optimization.
+          </p>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="font-bold text-lg">Senior Engineer – HCL Comnet</h3>
+          <p class="text-sm muted">
+            Worked on multi-tenant ITSM automation, audit tooling, and platform customization across 111+ enterprise clients.
+          </p>
+        </article>
+
+        <article class="glass p-6">
+          <h3 class="font-bold text-lg">Project Engineer – Wipro Technology</h3>
+          <p class="text-sm muted">
+            Worked as a BMC Remedy Developer and L1 Team Lead supporting BFSI and telecom clients. Led CMDB and ITSM customizations, handled customer escalations, and identified automation opportunities that reduced errors by <strong>95%</strong> and FTE effort by <strong>40%</strong>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-6xl mx-auto mb-24" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title" class="section-title">
+        <i data-lucide="quote" class="text-blue-600" aria-hidden="true"></i>
+        What People Say
+      </h2>
+
+      <div class="relative overflow-hidden" aria-live="polite">
+        <div id="testimonial-track" class="flex transition-transform duration-700">
+          <article class="min-w-full px-6">
+            <div class="glass p-8">
+              <p class="italic text-slate-700 mb-6">
+                “Himanshu is a good team player. Possesses strong development skills, is well spoken, and demonstrates excellent communication ability.”
+              </p>
+              <div>
+                <p class="font-bold">Vineet Jain</p>
+                <p class="text-sm text-slate-500">
+                  General Manager – Infrastructure Services (On-Prem & Cloud)
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="min-w-full px-6">
+            <div class="glass p-8">
+              <p class="italic text-slate-700 mb-6">
+                “Himanshu is one of the most dependable professionals I’ve worked with. He demonstrates excellent team leadership and strong commitment to delivery.”
+              </p>
+              <div>
+                <p class="font-bold">Vinay Bhavsar, PMP</p>
+                <p class="text-sm text-slate-500">
+                  Business Problem Solver & IT Service Delivery Manager
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="min-w-full px-6">
+            <div class="glass p-8">
+              <p class="italic text-slate-700 mb-6">
+                “Himanshu is extraordinarily resourceful, passionate, and reliable. He consistently delivers quality outcomes within tight timelines.”
+              </p>
+              <div>
+                <p class="font-bold">Gulshan Lal Gupta</p>
+                <p class="text-sm text-slate-500">
+                  Enterprise Architect
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-6xl mx-auto pt-6 pb-10 border-t border-slate-200">
+    <div class="flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-600">
+      <p>© 2026 Himanshu Gupta. All rights reserved.</p>
+      <p>RPA Architect | AI Automation Architect | Power Platform | Blue Prism | ITSM Automation</p>
+    </div>
+  </footer>
+
+  <script>
+    /* =========================
+       LUCIDE ICONS
+    ========================= */
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    /* =========================
+       HG NEXUS PANEL LOGIC
+    ========================= */
+    const panel = document.getElementById("hg-nexus-panel");
+    const closeBtn = document.getElementById("hg-nexus-close");
+    const launcher = document.getElementById("hg-nexus-launcher");
+
+    function openPanel() {
+      panel.classList.remove("scale-0", "opacity-0");
+      launcher.classList.add("hidden");
+    }
+
+    function minimizePanel() {
+      panel.classList.add("scale-0", "opacity-0");
+      launcher.classList.remove("hidden");
+    }
+
+    closeBtn?.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      minimizePanel();
+    });
+
+    launcher?.addEventListener("click", (e) => {
+      e.preventDefault();
+      openPanel();
+    });
+
+    window.addEventListener("load", () => {
+      if (window.innerWidth >= 768) {
+        openPanel();
+      } else {
+        minimizePanel();
+      }
+    });
+
+    /* =========================
+       TESTIMONIAL SLIDER
+    ========================= */
+    const track = document.getElementById("testimonial-track");
+    let index = 0;
+
+    if (track && track.children.length > 1) {
+      setInterval(() => {
+        index = (index + 1) % track.children.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }, 5000);
+    }
+
+    /* =========================
+       HG NEXUS KNOWLEDGE BASE
+    ========================= */
+    const KB = {
+      experience: {
+        keywords: ["experience", "career", "background", "years"],
+        response:
+          "Himanshu has 11+ years of experience delivering RPA, AI-driven automation, Power Platform, and ITSM solutions across Cognizant, HCL, and Wipro."
+      },
+      skills: {
+        keywords: ["skills", "technology", "tools", "stack"],
+        response:
+          "Core skills include Blue Prism, Power Automate, Power Apps, AI Builder, Generative AI, ServiceNow, BMC Remedy, and enterprise automation architecture."
+      },
+      industries: {
+        keywords: ["industry", "domain", "banking", "telecom"],
+        response:
+          "Industry experience spans Banking & BFSI, Telecom, and Enterprise IT / ITSM environments."
+      },
+      certifications: {
+        keywords: ["certification", "certified"],
+        response:
+          "Certifications include Microsoft Power Platform (PL-400, PL-500, PL-300), Blue Prism, Oracle Generative AI, Azure, ServiceNow, and BMC."
+      },
+      contact: {
+        keywords: ["contact", "email", "reach"],
+        response:
+          "You can contact Himanshu at himanshume.gla@gmail.com or use the Contact button in the hero section."
+      },
+      resume: {
+        keywords: ["resume", "cv", "download"],
+        response:
+          "You can download the resume using the Resume button in the hero section."
+      },
+      services: {
+        keywords: ["service", "capabilities", "offer"],
+        response:
+          "Himanshu offers RPA architecture, AI-driven automation, ITSM automation, consulting, and proof-of-concept to production delivery support."
+      }
+    };
+
+    /* =========================
+       CHAT HANDLERS
+    ========================= */
+    const chatArea = document.getElementById("chatArea");
+    const chatInput = document.getElementById("chatInput");
+    const sendBtn = document.getElementById("sendBtn");
+
+    sendBtn?.addEventListener("click", sendMessage);
+
+    chatInput?.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    function sendMessage() {
+      const text = chatInput.value.trim();
+      if (!text) return;
+
+      appendMessage(text, "user");
+      chatInput.value = "";
+
+      setTimeout(() => {
+        const reply = matchResponse(text);
+        reply ? appendMessage(reply, "bot") : emailFallback(text);
+      }, 300);
+    }
+
+    function matchResponse(msg) {
+      const text = msg.toLowerCase();
+
+      for (const key in KB) {
+        if (KB[key].keywords.some((k) => text.includes(k))) {
+          return KB[key].response;
+        }
+      }
+
+      return null;
+    }
+
+    function appendMessage(text, sender) {
+      const div = document.createElement("div");
+      div.className =
+        sender === "user"
+          ? "bg-blue-600 text-white p-3 rounded-lg text-right"
+          : "bg-slate-100 text-slate-800 p-3 rounded-lg";
+
+      div.textContent = text;
+      chatArea.appendChild(div);
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }
+
+    /* =========================
+       EMAIL ESCALATION
+    ========================= */
+    function emailFallback(question) {
+      const safeQuestion = question
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+
+      const div = document.createElement("div");
+      div.className = "bg-yellow-50 border border-yellow-200 p-3 rounded-lg text-sm";
+
+      div.innerHTML = `
+        <p class="mb-2 text-slate-700">I may not have that information yet.</p>
+        <p class="mb-3 text-slate-700">You can send your question directly:</p>
+        <form action="https://formsubmit.co/himanshume.gla@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="HG Nexus – Portfolio Query">
+          <input type="hidden" name="Question" value="${safeQuestion}">
+          <input type="hidden" name="_captcha" value="false">
+          <textarea
+            name="Message"
+            required
+            class="w-full border rounded p-2 text-sm"
+            placeholder="Add more details..."
+            aria-label="Add more details"
+          ></textarea>
+          <button
+            type="submit"
+            class="mt-2 bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700"
+          >
+            Send via Email
+          </button>
+        </form>
+      `;
+
+      chatArea.appendChild(div);
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

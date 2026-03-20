@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Himanshu Gupta – M-Shaped Expertise</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #0a1628;
+    --navy2:  #112240;
+    --navy3:  #1a3358;
+    --blue:   #1e5fa8;
+    --blue2:  #2979d4;
+    --sky:    #4fa8e8;
+    --gold:   #f0b429;
+    --gold2:  #ffd166;
+    --silver: #b8cfe8;
+    --light:  #deeaf8;
+    --white:  #f0f6ff;
+    --text-dim: #8aaecf;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #070f1e;
+    color: var(--white);
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* ── background grid ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(30,95,168,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30,95,168,0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+
+  .page {
+    position: relative; z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 32px 80px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+  .header-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .header-eyebrow::before,
+  .header-eyebrow::after {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--gold);
+  }
+  .header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .header h1 span { color: var(--sky); }
+  .header-sub {
+    font-size: 15px; color: var(--text-dim); font-weight: 300;
+    max-width: 480px; margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ── M-SHAPE LABEL ── */
+  .m-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 100%);
+    color: var(--navy);
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px; border-radius: 20px;
+    margin-bottom: 48px;
+  }
+
+  /* ── TOP BAND ── */
+  .top-band {
+    background: linear-gradient(135deg, var(--navy2) 0%, var(--navy3) 100%);
+    border: 1px solid rgba(79,168,232,0.25);
+    border-radius: 20px;
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .top-band::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--blue2), var(--sky), var(--blue2));
+  }
+  .top-band-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--sky);
+    text-align: center; margin-bottom: 28px;
+  }
+  .top-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 640px) {
+    .top-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .top-item {
+    text-align: center;
+  }
+  .top-icon {
+    width: 44px; height: 44px;
+    background: rgba(79,168,232,0.12);
+    border: 1px solid rgba(79,168,232,0.3);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 20px;
+  }
+  .top-item h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 700;
+    color: var(--white); margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .top-item p {
+    font-size: 11px; color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* ── CONNECTOR ── */
+  .connector-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; margin-bottom: 0;
+    padding: 0 48px;
+  }
+  .connector {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0;
+  }
+  .connector-line {
+    width: 2px; height: 28px;
+    background: linear-gradient(180deg, rgba(79,168,232,0.5) 0%, rgba(79,168,232,0.1) 100%);
+  }
+  .connector-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--sky);
+    box-shadow: 0 0 8px var(--sky);
+    flex-shrink: 0;
+  }
+
+  /* ── PILLARS ── */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 640px) {
+    .pillars { grid-template-columns: repeat(2, 1fr); }
+    .connector-row { display: none; }
+  }
+
+  .pillar {
+    border-radius: 18px;
+    padding: 28px 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex; flex-direction: column; gap: 0;
+    border: 1px solid transparent;
+    transition: transform 0.25s;
+  }
+  .pillar:hover { transform: translateY(-4px); }
+
+  /* M-shape depth gradient — outer pillars deeper, inner ones prominent */
+  .pillar-1 {
+    background: linear-gradient(160deg, #0e2b52 0%, #0a1e3d 100%);
+    border-color: rgba(41,121,212,0.4);
+  }
+  .pillar-2 {
+    background: linear-gradient(160deg, #0c2444 0%, #071830 100%);
+    border-color: rgba(30,95,168,0.5);
+  }
+  .pillar-3 {
+    background: linear-gradient(160deg, #0e2b52 0%, #0a1e3d 100%);
+    border-color: rgba(41,121,212,0.4);
+  }
+  .pillar-4 {
+    background: linear-gradient(160deg, #0c2444 0%, #071830 100%);
+    border-color: rgba(30,95,168,0.5);
+  }
+
+  /* top accent bar per pillar */
+  .pillar::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    border-radius: 18px 18px 0 0;
+  }
+  .pillar-1::before { background: linear-gradient(90deg, #2979d4, #4fa8e8); }
+  .pillar-2::before { background: linear-gradient(90deg, #f0b429, #ffd166); }
+  .pillar-3::before { background: linear-gradient(90deg, #2979d4, #4fa8e8); }
+  .pillar-4::before { background: linear-gradient(90deg, #38c9a8, #6ee7d0); }
+
+  .pillar-icon {
+    font-size: 28px; margin-bottom: 12px; margin-top: 4px;
+    display: block;
+  }
+  .pillar-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px; font-weight: 800;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 18px;
+    line-height: 1.3;
+  }
+
+  .pillar-cert {
+    background: rgba(240,180,41,0.12);
+    border: 1px solid rgba(240,180,41,0.35);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+  .pillar-cert-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700;
+    color: var(--gold2);
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .pillar-cert-label::before { content: '🏅'; font-size: 13px; }
+  .pillar-cert p {
+    font-size: 11px; color: var(--silver); line-height: 1.5;
+  }
+
+  .pillar-stat {
+    text-align: center;
+    padding: 14px 10px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .pillar-stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 38px; font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--sky), var(--gold2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .pillar-stat-label {
+    font-size: 11px; font-weight: 500;
+    color: var(--silver);
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  .pillar-item {
+    margin-bottom: 14px;
+  }
+  .pillar-item-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 700;
+    color: var(--sky);
+    margin-bottom: 5px;
+  }
+  .pillar-item p {
+    font-size: 11px; color: var(--text-dim);
+    line-height: 1.55;
+  }
+
+  .pillar-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 14px 0;
+  }
+
+  /* ── BOTTOM BAND ── */
+  .bottom-band {
+    background: linear-gradient(135deg, var(--navy2) 0%, var(--navy3) 100%);
+    border: 1px solid rgba(79,168,232,0.25);
+    border-radius: 20px;
+    padding: 32px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bottom-band::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--blue2), var(--sky), var(--blue2));
+  }
+  .bottom-band-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--sky);
+    text-align: center; margin-bottom: 28px;
+  }
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 580px) {
+    .bottom-grid { grid-template-columns: 1fr; }
+  }
+  .bottom-item {
+    text-align: center;
+    padding: 20px 16px;
+    background: rgba(79,168,232,0.06);
+    border: 1px solid rgba(79,168,232,0.15);
+    border-radius: 14px;
+  }
+  .bottom-icon {
+    font-size: 28px; margin-bottom: 10px; display: block;
+  }
+  .bottom-item h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: var(--white); margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .bottom-item p {
+    font-size: 11px; color: var(--text-dim); line-height: 1.55;
+  }
+
+  /* ── footer ── */
+  .footer {
+    text-align: center; margin-top: 48px;
+    font-size: 11px; color: rgba(138,174,207,0.4);
+    letter-spacing: 1px;
+  }
+
+  /* ── fade-in animation ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .header    { animation: fadeUp 0.5s ease both; }
+  .top-band  { animation: fadeUp 0.6s 0.1s ease both; }
+  .pillars   { animation: fadeUp 0.6s 0.2s ease both; }
+  .bottom-band { animation: fadeUp 0.6s 0.3s ease both; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-eyebrow">Professional Profile</div>
+    <h1>Himanshu Gupta<br/><span>M-Shaped Expertise</span></h1>
+    <p class="header-sub" style="margin-top:10px;">Broad foundations · Four deep specialisations · Enterprise-grade delivery</p>
+    <div style="display:flex;justify-content:center;margin-top:24px;">
+      <div class="m-label">M-Shaped · Digital Transformation &amp; AI</div>
+    </div>
+  </div>
+
+  <!-- TOP BAND — BROAD KNOWLEDGE -->
+  <div class="top-band">
+    <div class="top-band-title">Broad Foundational Knowledge</div>
+    <div class="top-grid">
+      <div class="top-item">
+        <div class="top-icon">⚙️</div>
+        <h3>IT Service Management (ITSM) &amp; ITIL</h3>
+        <p>Extensive experience with industry-standard platforms including ServiceNow and BMC Remedy.</p>
+      </div>
+      <div class="top-item">
+        <div class="top-icon">📋</div>
+        <h3>Project Management &amp; Agile Delivery</h3>
+        <p>Expert in Agile methodologies and JIRA for managing end-to-end project lifecycles.</p>
+      </div>
+      <div class="top-item">
+        <div class="top-icon">📊</div>
+        <h3>Data Analysis &amp; Cloud Fundamentals</h3>
+        <p>Certified in Microsoft Azure Fundamentals and Power BI (PL-300) for data-driven decision making.</p>
+      </div>
+      <div class="top-item">
+        <div class="top-icon">🌐</div>
+        <h3>Global Stakeholder Coordination</h3>
+        <p>Seamlessly managing communications and deliverables across the USA and Australia.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONNECTORS -->
+  <div class="connector-row">
+    <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div></div>
+    <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div></div>
+    <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div></div>
+    <div class="connector"><div class="connector-line"></div><div class="connector-dot"></div></div>
+  </div>
+
+  <!-- 4 PILLARS -->
+  <div class="pillars">
+
+    <!-- PILLAR 1 — Power Platform -->
+    <div class="pillar pillar-1">
+      <span class="pillar-icon">💠</span>
+      <div class="pillar-title">Microsoft Power Platform</div>
+
+      <div class="pillar-cert">
+        <div class="pillar-cert-label">Certified Developer</div>
+        <p>PL-400 Power Platform Developer Associate · PL-500 Power Automate RPA Developer Associate · PL-300 BI Data Analyst</p>
+      </div>
+
+      <div class="pillar-divider"></div>
+
+      <div class="pillar-item">
+        <div class="pillar-item-title">Custom App &amp; Flow Development</div>
+        <p>Expert in building Canvas and Model-Driven Apps paired with complex Power Automate workflows to optimise banking operations.</p>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-item-title">Copilot Studio Agents</div>
+        <p>Designing and deploying enterprise-grade Copilot Studio agents for autonomous ITSM and process workflows.</p>
+      </div>
+    </div>
+
+    <!-- PILLAR 2 — Agentic & Generative AI -->
+    <div class="pillar pillar-2">
+      <span class="pillar-icon">🤖</span>
+      <div class="pillar-title">Agentic &amp; Generative AI</div>
+
+      <div class="pillar-cert">
+        <div class="pillar-cert-label">OCI Gen AI Certified</div>
+        <p>Oracle Cloud Infrastructure 2024 Generative AI Certified Professional · Azure AI Engineer Associate</p>
+      </div>
+
+      <div class="pillar-divider"></div>
+
+      <div class="pillar-stat">
+        <div class="pillar-stat-num">80%</div>
+        <div class="pillar-stat-label">Effort Reduction</div>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-item-title">GenAI Proof of Concepts</div>
+        <p>Developed Generative AI PoCs that automated test case generation from process documents, cutting effort by 80%.</p>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-item-title">Multi-Agent Orchestration</div>
+        <p>Designing agentic task-routing systems using Azure AI Foundry targeting 70%+ autonomous ITSM handling.</p>
+      </div>
+    </div>
+
+    <!-- PILLAR 3 — Enterprise RPA -->
+    <div class="pillar pillar-3">
+      <span class="pillar-icon">⚡</span>
+      <div class="pillar-title">Enterprise RPA</div>
+
+      <div class="pillar-cert">
+        <div class="pillar-cert-label">Blue Prism Certified</div>
+        <p>Blue Prism Solution Designer (ASD-01) · Blue Prism Certified Developer (AD-01)</p>
+      </div>
+
+      <div class="pillar-divider"></div>
+
+      <div class="pillar-stat">
+        <div class="pillar-stat-num">90%</div>
+        <div class="pillar-stat-label">Efficiency Improvement</div>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-item-title">Banking &amp; BFSI Automation</div>
+        <p>Led 15+ automation solutions for banking and telecom clients — KYC, loan recovery, collections — reducing manual intervention and error rates significantly.</p>
+      </div>
+    </div>
+
+    <!-- PILLAR 4 — Solution Architecture -->
+    <div class="pillar pillar-4">
+      <span class="pillar-icon">🏛️</span>
+      <div class="pillar-title">Solution Architecture &amp; Strategy</div>
+
+      <div class="pillar-divider"></div>
+
+      <div class="pillar-stat">
+        <div class="pillar-stat-num">25+</div>
+        <div class="pillar-stat-label">Data-Driven Opportunities Discovered</div>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-item-title">'SWAT' Problem Solving</div>
+        <p>Deployed to solve critical technical bottlenecks and provide customised solution recommendations across enterprise clients.</p>
+      </div>
+
+      <div class="pillar-item">
+        <div class="pillar-item-title">Professional Documentation</div>
+        <p>Expert in crafting Process Design Documents (PDD) and Solution Design Documents (SDD) to ensure smooth implementation.</p>
+      </div>
+    </div>
+
+  </div><!-- /pillars -->
+
+  <!-- CONNECTORS BOTTOM -->
+  <div class="connector-row" style="transform:scaleY(-1);margin-bottom:0;margin-top:0;">
+    <div class="connector"><div class="connector-dot"></div><div class="connector-line"></div></div>
+    <div class="connector"><div class="connector-dot"></div><div class="connector-line"></div></div>
+    <div class="connector"><div class="connector-dot"></div><div class="connector-line"></div></div>
+    <div class="connector"><div class="connector-dot"></div><div class="connector-line"></div></div>
+  </div>
+
+  <!-- BOTTOM BAND — SOFT SKILLS -->
+  <div class="bottom-band">
+    <div class="bottom-band-title">Soft Skills &amp; Mindset</div>
+    <div class="bottom-grid">
+      <div class="bottom-item">
+        <span class="bottom-icon">💡</span>
+        <h3>Quick Learner of Tech Trends</h3>
+        <p>Rapidly adapts to emerging technologies like Generative AI and Machine Learning to enhance IT service desk solutions.</p>
+      </div>
+      <div class="bottom-item">
+        <span class="bottom-icon">🌉</span>
+        <h3>Bridging the Technical Gap</h3>
+        <p>Skilled at translating complex RPA and technical concepts into actionable insights for non-technical stakeholders.</p>
+      </div>
+      <div class="bottom-item">
+        <span class="bottom-icon">🤝</span>
+        <h3>Global Customer Experience</h3>
+        <p>Dedicated to delivering high-quality, professional experiences for a global customer base in the BFSI and Telecom sectors.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Himanshu Gupta · linkedin.com/in/hg1992 · himanshume.gla@gmail.com</div>
+
+</div>
+</body>
+</html>
